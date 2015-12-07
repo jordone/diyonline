@@ -1,0 +1,101 @@
+<?php $__env->startSection('wizardtitle'); ?>
+<?php echo STEP1_TITLE; ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('step'); ?> data-step-number="step1" <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('wizardcontent'); ?>
+    <?php echo $__env->make('snipplets.steps_header_text', ['step' => 'STEP1'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+    <h4 class="">This information is what <?php echo COMPANY_NAME; ?> software relays to the Department of Education (DOE) so they can correspond with you.</h4>
+
+	<?php $__env->startSection('wizardform_open'); ?>
+        <?php if(isset($update_enabled) && $update_enabled): ?>
+	        <?php echo Form::open(array('url' => 'newclientform', 'class' => 'form-horizontal ajaxcheck')); ?>
+
+            <?php else: ?>
+            <div class="form form-horizontal">
+          <?php endif; ?>
+      <?php $__env->stopSection(); ?>
+
+      <!-- errors -->
+      <?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+      <div class=" form-group">
+              <label class="col-sm-2 control-label" for="inputFirstname">Full Name</label>
+              <div class="col-sm-4"><input pattern="[^\!\@\#\$\%\^\&\*\<;\>]*" type="text" name="first_name" class="form-control" id="inputFirstname" placeholder="First Name" value="<?php echo $client->TProperties->FirstName; ?>" required></div>
+
+			  <!--<label class="col-sm-1 control-label" for="inputLastname">Last Name</label>-->
+              <div class="col-sm-4"><input pattern="[^\!\@\#\$\%\^\&\*\<;\>]*" type="text" name="last_name" class="form-control" id="inputLastname" placeholder="Last Name"  value="<?php echo $client->TProperties->LastName; ?>" required></div>
+      </div>
+	
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="InputPhone">Mobile Number</label>
+	    <div class="col-sm-8"><input pattern="[^\!\@\#\$\%\^\&\*\<;\>]*" type="text" name="phone" class="form-control" id="InputPhone" placeholder="Enter phone number"  value="<?php echo $client->TProperties->HomeNumber; ?>" required></div>
+	  </div> 
+	  
+	  	
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label"  for="exampleInputEmail1">E-Mail</label>
+	   <div class="col-sm-8">
+	   		<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"  value="<?php echo $client->TProperties->EmailAddress; ?>" required>
+	    	<font color="red">This e-mail address is where <?php echo COMPANY_NAME; ?> will send you your username and password </font>
+	    </div>
+	  </div>
+
+                <?php if( !Session::get('fileNumber') && (!isset($office_viewer) || $office_viewer != true) ): ?>
+                <?php if(Request::Ajax()): ?>
+                        <!--<script src="https://www.google.com/recaptcha/api.js?onload=showRecaptcha&render=explicit" async defer></script>-->
+                <?php
+                $randomcapacha = 'amihuman_'.uniqid().'';
+				if (false): # PRZ
+                ?>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"  for="exampleInputEmail1">Prove Human</label>
+                    <div class="col-sm-8" id="captchadiv"><div class="g-recaptcha" id="<?php echo $randomcapacha; ?>" data-sitekey="6LfMGg8TAAAAAAxcS0dmNYYHXk_F2Sq6Pc5IMoS0"></div></div>
+
+                    <script type="text/javascript">
+                        function showRecaptcha() {
+                            grecaptcha.render(document.getElementById('<?php echo $randomcapacha; ?>'), {
+                                'sitekey' : '6LfMGg8TAAAAAAxcS0dmNYYHXk_F2Sq6Pc5IMoS0'
+                            });
+                        }
+                        showRecaptcha();
+                    </script>
+                </div>
+				<? endif; ?>
+
+                <?php else: ?>
+					<!-- PRZ
+                    <div class="row">
+                        <label  class="col-sm-2 control-label"  for="leadsource">Prove Human</label>
+                        <div class="col-sm-8"><div class="g-recaptcha" id="amihuman2" data-sitekey="6LfMGg8TAAAAAAxcS0dmNYYHXk_F2Sq6Pc5IMoS0"></div></div>
+                    </div>
+					-->
+                <?php endif; ?>
+
+                <?php endif; ?>
+	  
+	  
+	  <?php $__env->startSection('wizardform_close'); ?>
+          <?php if(isset($update_enabled) && $update_enabled): ?>
+              <?php echo $__env->make('steps.partials.submit', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php echo Form::close(); ?>
+
+              <?php else: ?>
+            </div>
+          <?php endif; ?>
+	 <?php $__env->stopSection(); ?>
+	 
+	 <script>
+		 if ( !(CurrentStepsLoaded & step1) )
+			 CurrentStepsLoaded = step1;
+
+
+	 $("#InputPhone").mask("(999) 999-9999")
+	 </script>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('wizard', array('stepnav' => false, 'class' => 'navbar-info text-info'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

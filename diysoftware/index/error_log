@@ -1,0 +1,14 @@
+[29-Sep-2015 08:16:42 EST] PHP Fatal error:  Method Illuminate\View\View::__toString() must not throw an exception in /home/diysls/public_html/diysoftware/laravel/app/controllers/ClientController.php on line 0
+[09-Nov-2015 12:23:44 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 30
+[09-Nov-2015 12:26:10 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 30
+[09-Nov-2015 12:58:57 America/New_York] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 30
+[09-Nov-2015 13:20:26 America/New_York] PHP Parse error:  syntax error, unexpected ')' in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 32
+[09-Nov-2015 13:20:40 America/New_York] PHP Parse error:  syntax error, unexpected ')' in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 32
+[09-Nov-2015 13:20:44 America/New_York] PHP Parse error:  syntax error, unexpected ')' in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 32
+[09-Nov-2015 13:21:26 America/New_York] PHP Warning:  preg_quote() expects parameter 1 to be string, object given in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/compiled.php on line 3489
+[09-Nov-2015 13:21:51 America/New_York] PHP Parse error:  syntax error, unexpected '$app' (T_VARIABLE) in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 44
+[09-Nov-2015 13:21:53 America/New_York] PHP Parse error:  syntax error, unexpected '$app' (T_VARIABLE) in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 44
+[09-Nov-2015 13:21:56 America/New_York] PHP Parse error:  syntax error, unexpected '$app' (T_VARIABLE) in /home/diysls/public_html/demo/diysoftware/laravel/bootstrap/start.php on line 44
+[10-Nov-2015 13:55:14 EST] PHP Fatal error:  Can't use function return value in write context in /home/diysls/public_html/demo/diysoftware/laravel/app/controllers/ClientController.php on line 466
+[10-Nov-2015 13:55:18 EST] PHP Fatal error:  Can't use function return value in write context in /home/diysls/public_html/demo/diysoftware/laravel/app/controllers/ClientController.php on line 466
+[25-Nov-2015 13:33:09 America/New_York] PHP Parse error:  syntax error, unexpected '<' in /home/diysls/public_html/demoprocess2/diysoftware/index/index.php on line 161

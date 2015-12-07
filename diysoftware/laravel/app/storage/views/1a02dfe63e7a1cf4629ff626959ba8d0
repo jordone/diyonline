@@ -1,0 +1,124 @@
+<?php $__env->startSection('wizardtitle'); ?>
+<?php if (isset($update_complete) && $update_complete)
+{ ?>
+Update Successful
+<?php } else { ?>
+We Are Currently Processing Your Payment
+<?php } ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="step8" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+	<?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+	<center><h2 style="color:red">THANK YOU!</h2></center>
+	
+	<center><b>For Allowing <?php echo COMPANY_NAME; ?> To Assist With Your Federal Student Loans</b></center><br/>
+	
+	<?php $__env->startSection('wizardform_open'); ?>
+		<?php echo Form::open(array('url' => 'paymentupdate', 'class' => 'form-horizontal ajaxcheck processpayment paymentchecker1')); ?>
+
+	<?php $__env->stopSection(); ?>
+		
+		<center><h2 style="color:red">DOWNLOAD YOUR FORMS NOW</h2></center>
+		<center>
+			<b>Your Forms Are Currently Being Generated.</b><br/>
+			<b>Within 5 Minutes You Will Receive An Email With Your Username And Password.</b><br/>
+			<b>This Will Allow You To Download The Forms &amp; Instructions At Your Convenience.</b><br/>
+			<b>If You Have Not Recieved Your Email Within 5 Minutes Please Check Your Spam Folder.</b>
+		</center>
+		<br/>
+		
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-3">
+					<div style="text-align:right"><b>GENERATING FORMS</b> </div>
+			</div>
+			<!-- PRZ
+			<div class="col-sm-5">
+				<div class="progress">
+					<div class="progress-bar progress-bar-danager" id="progressbar3m" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+				</div>
+			</div> -->
+		</div>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<div class="progress">
+					<div class="progress-bar progress-bar-danager" id="progressbar3m" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+				</div>
+			</div>
+		</div>
+		<center><h2 id="paymentsuccess" style="color:red; display:none;">COMPLETED - PLEASE CHECK YOUR EMAIL</h2></center>
+
+ 	  
+	 <?php $__env->startSection('wizardform_close'); ?>
+		<?php echo Form::close(); ?>
+
+	 <?php $__env->stopSection(); ?>
+
+	 <script>
+	 jQuery('*[data-step-number="step8"]').ScrollTo();
+
+	 function countdown(callback) {
+
+
+	 	var bar = document.getElementById('progressbar3m'),
+	 	time = 0;
+
+	 	<?php if(!$instantly): ?>
+	 	var max = 5*60
+	 	<?php else: ?>
+	 	var max = 10;
+	 	<?php endif; ?>
+
+
+	 	var CheckTimer = setInterval(function() {
+	 		time++;
+	 		bar.style.width = Math.floor(100 * time / max) + '%';
+	 		bar.innerHTML = Math.floor(100 * time / max) + '%';
+	 		jQuery(bar).data('aria-valuenow', Math.floor(100 * time / max));
+
+	 		if (time - 1 >= max) {
+	 			clearInterval(CheckTimer);
+	 			bar.innerHTML = '100%';
+	 			// 600ms - width animation time
+
+	 			callback && setTimeout(callback, 600);
+	 		}
+	 	},
+
+	 	<?php if($instantly): ?>
+	 	300
+
+	 	<?php else: ?>
+
+	 	1000
+
+	 	<?php endif; ?>
+	 	);
+	 }
+
+	 countdown(function() {
+	 	jQuery('.paymentchecker1').submit(); // PRZ 
+		jQuery('#paymentsuccess').show();
+	 });
+
+		 function CheckPaymentStatus()
+		 {
+			 jQuery.get('<?php echo URL::to('/ajaxcheckpayment/'.Session::getId()); ?>}', function(paymentResponse){
+				 console.log(paymentResponse);
+
+				 if (paymentResponse.status == "approved")
+				 {
+					 jQuery('.paymentchecker1').submit();
+				 }
+				 else
+				 {
+					 jQuery('#paymentStatusText').html(paymentResponse.status);
+				 }
+			 }, 'json');
+		 }
+	 </script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,69 @@
+<?php $__env->startSection('wizardtitle'); ?>
+Your Loans
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="steploans5" <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('wizardcontent'); ?>
+
+	<h4 class="info-text"></h4>
+	
+	<?php $__env->startSection('wizardform_open'); ?>
+		<?php echo Form::open(array('url' => 'steploansf', 'class' => 'form-horizontal ajaxcheck')); ?>
+
+	<?php $__env->stopSection(); ?>
+	
+  	<?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+  	<table class="table table-striped">
+	  	<thead>
+	  		<tr>
+		  		<th>Loan</th>
+		  		<th>Balance</th>
+		  		<th>Status</th>
+	  		</tr>
+	  	</thead>
+	  	<tbody>
+	  	
+	  	<?php foreach($LoanData->Loans as $Loan): ?>
+	  	<tr>
+	  		<td><?php echo e($Loan->Creditor->Name); ?></td>
+	  		<td>$<?php echo e($Loan->Creditor->Balance); ?></td>
+	  		<td>
+	  		<?php if($Loan->AccountStatus == 'L'): ?>
+	  		Good
+	  		<?php else: ?>
+	  			<?php if($Loan->AccountStatus == 'E' || $Loan->AccountStatus == 'K'): ?>
+	  			Consolidated
+	  			
+	  			<?php else: ?>
+					<?php echo e($Loan->AccountStatus); ?>
+
+	  			<?php endif; ?>
+	  			
+	  		<?php endif; ?>
+	  		</td>
+	  	</tr>
+	  	<?php endforeach; ?>
+	  	</tbody>
+	  
+	  </table>
+  	  
+  	  
+  
+	  <div class="form-group">
+	  	<input type="checkbox" class="formsubmitter checkbox-inline" id="checkboxshowloans5" name="checkboxshowloans5"><label for="checkboxshowloans5" class="checkbox-label col-sm-offset-1" style="font-weight:bold;font-size:15px;">Check the box if all of the information is correct &amp; continue to STEP 6</label>
+	  </div>
+	  
+	  <?php $__env->startSection('wizardform_close'); ?>
+		<?php echo Form::close(); ?>
+
+	 <?php $__env->stopSection(); ?>
+	 
+	<script>
+
+	var prevElem = jQuery('*[data-step-number="steploans5"]').ScrollTo().prev(":first");
+//	 jQuery('.wizard-content',prevElem).slideUp();
+	</script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

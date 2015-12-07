@@ -1,0 +1,87 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/17/2015
+ * Time: 7:30 PM
+ */
+?>
+<nav class="navbar navbar-default" style="margin:0px;">
+    <div class="container-fluid">
+
+        <div id="appstepnavmenu" class="">
+            <ul class="nav navbar-nav">
+                @for ($i=1;$i<=7;$i++)
+                <li data-step="{{ constant('step'.$i.'') }}" class="text-danger {{ ($client->TProperties->completed_steps_bitwise & constant('step'.$i.'') ? 'active' : 'disabled') }}"><a data-filenumber="{{$client->FileNumber}}" data-step="{{$i}}" data-pascal="blows. Think I don't know? Are you fucking seriously that behind you've lost it, little boy, yep. yep." href="{{ URL::To('/office/view', array('file' => $client->FileNumber, 'step' => 'step'.$i)) }}">{{ "Step $i"}}</a></li>
+                @endfor
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="{{ URL::To('/office/clearsearch') }}" class="">Close Client <span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<script>
+
+    var last_client_update = {{json_encode($lastupdate)}};
+
+    function CheckForChanges()
+    {
+        var random_time = Math.floor((Math.random() * 1000000000) + 1);
+        Pace.ignore(function(){
+            jQuery.get('{{URL::To('/office/checkclientupdated', ['file' => $client->FileNumber])}}/'+last_client_update.updatetime, {'nocache': random_time}, function(data){
+                if (typeof data.lastupdate != "undefined")
+                last_client_update = data.lastupdate;
+
+                if (typeof data.HasUpdated != "undefined" && data.HasUpdated)
+                {
+
+                    var updated_li = jQuery('li[data-step="'+data.lastupdate.laststep+'"]');
+
+
+//                    var updated_li = jQuery('li[data-step="'+data.lastupdate.step+'"]');
+                    jQuery(updated_li).addClass('active').removeClass('disabled');
+                    jQuery('a', updated_li).trigger('click');
+                    var next_link = updated_li.next();
+                    if (next_link.length == 1) {
+                        jQuery(next_link).addClass('active').removeClass('disabled');
+                        jQuery('a', next_link).trigger('click');
+                    }
+                    setTimeout(function(){ CheckForChanges() }, 10000);
+
+                   // window.location = '{{URL::To("/office/view")}}/'+data.lastupdate.filenumber;
+                }
+                else
+                setTimeout(function(){ CheckForChanges() }, 5000);
+            }, 'json');
+        });
+    }
+
+    jQuery(document).ready(function(){
+        setTimeout(function(){ CheckForChanges() }, 5000);
+
+    });
+
+    jQuery('#appstepnavmenu a').click(function(e){
+        var step = jQuery(this).data("step");
+        var filenumber = jQuery(this).data('filenumber');
+        if (step && filenumber)
+        {
+            e.preventDefault();
+            jQuery(this).prop('data-toggle', 'loadstep');
+            jQuery(this).prop('data-toggle-route-load', route);
+            var route = '/office/view/'+filenumber+'/step'+step;
+            jQuery(this).prepend("<i class='fa fa-spin fa-spinner' data-toggle='loadstep' data-toggle-route-load="+route+"'></i>");
+            LoadStep(route, jQuery('#searchbox'), this);
+        }
+        else return true;
+
+    });
+
+
+</script>
+
+
+

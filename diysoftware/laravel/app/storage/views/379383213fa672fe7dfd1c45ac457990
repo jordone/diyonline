@@ -1,0 +1,90 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/1/2015
+ * Time: 1:55 AM
+ */
+?>
+
+
+<?php $__env->startSection('wizardtitle'); ?>
+    <?php echo STEP4_TITLE; ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="step124" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+    <?php echo $__env->make('snipplets.steps_header_text', ['step' => 'STEP4'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo Form::open(array('url' => 'save_cart_items', 'class' => 'form-horizontal ajaxcheck updatecartprices')); ?>
+
+
+    <?php else: ?>
+        <div class="form form-horizontal">
+            <?php endif; ?>
+ <?php $__env->stopSection(); ?>
+
+    <?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+<?php
+$Products_HidePrices = true;
+?>
+
+
+<div id="selectonlyone">
+
+    <?php echo $__env->make('products/consolidation_note', ['client' => $client], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('products/recertification_app', ['client' => $client], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('products/pslf_app', ['client' => $client], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('products/forebearance_app', ['client' => $client], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+</div>
+
+<script>
+
+    CurrentStepsLoaded = CurrentStepsLoaded | step4;
+
+    jQuery('#selectonlyone input[type="checkbox"]').on('change',function(){
+        jQuery('#selectonlyone input[type="checkbox"]').not(this).not('.paid_already').attr('checked', false);
+        jQuery('#checkbox_showforms').attr('checked', false);
+
+    });
+
+</script>
+
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo $__env->make('steps.partials.submit', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::close(); ?>
+
+        <?php else: ?>
+        </div>
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<script>
+
+
+    var prevElem = jQuery('*[data-step-number="step124"]').ScrollTo().prev(":first");
+    //	 jQuery('.wizard-content',prevElem).slideUp();
+
+    // remove other forms after this one so they get positioned correctly.
+    jQuery('*[data-step-number="step5"]').remove();
+    jQuery('*[data-step-number="step6"]').remove();
+    jQuery('*[data-step-number="step7"]').remove();
+
+    jQuery('*[data-step-number="step91"]').remove();
+    jQuery('*[data-step-number="stepcrm"]').remove();
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('wizard', array('stepnav' => false, 'class' => 'navbar-info text-info'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

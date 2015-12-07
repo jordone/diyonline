@@ -1,0 +1,79 @@
+<center>
+<div class="inner_block"><a href="http://www.demoprocess2.diy-sls.com/office/search"><img class="" src="http://www.diy-sls.com/wp-content/uploads/2015/11/Search-button.png" alt="Search Client" width="192" height="67" />
+</a></div>
+</center>
+&nbsp;
+
+
+<?php $__env->startSection('wizardtitle', "".(isset($client->FileNumber) && $client->FileNumber ? "Register New" : "Register New")." Client"); ?>
+<?php $__env->startSection('step', 'data-step-number="merchant1"'); ?>
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo Form::open(array('url' => 'office/merchant/save/ltf', 'class' => 'form-horizontal '.(isset($client->FileNumber) && $client->FileNumber ? 'ajaxcheck' : ''))); ?>
+
+    <?php else: ?>
+        <div class="form form-horizontal">
+
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo $__env->make('steps.partials.submit', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::close(); ?>
+
+        <?php else: ?>
+        </div>
+    <?php endif; ?> 
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('wizardcontent'); ?>
+
+         <!-- JE   <?php if(isset($client->FileNumber) && $client->FileNumber): ?>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <?php echo $__env->make('office.partial.client', array('client' => $client, 'HideDocumentLink' => true, 'MerchantCloseFileLink' => true), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                    </div>
+                </div>
+            <?php endif; ?> -->
+
+
+  <!-- JE  <?php echo $__env->make('snipplets.steps_header_text', ['step' => 'STEP1'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
+      <!-- errors -->
+      <?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+      <div class=" form-group">
+          <label class="col-sm-2 control-label" for="inputFirstname">Full Name <span class="text-danger">*</span> </label>
+          <div class="col-sm-4"><input pattern="[^\!\@\#\$\%\^\&\*\<;\>]*" type="text" name="ltf[FirstName]" class="form-control" id="inputFirstname" placeholder="First Name" value="<?php echo $client->TProperties->FirstName; ?>" required></div>
+          <div class="col-sm-4"><input pattern="[^\!\@\#\$\%\^\&\*\<;\>]*" type="text" name="ltf[LastName]" class="form-control" id="inputLastname" placeholder="Last Name"  value="<?php echo $client->TProperties->LastName; ?>" required></div>
+	</div>
+
+	  <div class="form-group">
+          <label class="col-sm-2 control-label"  for="exampleInputEmail1">E-Mail <span class="text-danger">*</span></label>
+          <div class="col-sm-8">
+              <input type="email" name="ltf[EmailAddress]" class="form-control" id="exampleInputEmail1" placeholder="Email Address"  value="<?php echo $client->TProperties->EmailAddress; ?>" required>
+          </div>
+	  </div>
+
+
+
+<?php /*'Campaign' => "New Lead", "EDAOption" => "Yes", "USERNAME" => "diy.admin"*/ ?>
+                <input type="hidden" name="ltf[Campaign]" value="New Lead">
+                <input type="hidden" name="ltf[EDAOption]" value="Yes">
+                <input type="hidden" name="ltf[USERNAME]" value="<?php echo LEADTRAC_API_USERNAME; ?>">
+                <input type="hidden" name="ltf[completed_steps_bitwise]" value="<?php echo step1; ?>">
+
+
+                <input type="hidden" name="merchant[step]" value="1">
+                <input type="hidden" name="merchant[status]" value="">
+                <input type="hidden" name="merchant[fields]" value="FirstName|LastName|EmailAddress">
+                <input type="hidden" name="merchant[vr][EmailAddress]" value="required|email">
+
+	 <script>
+         $("#ssn2").mask("9999", {placeholder:"*"});
+         $("#InputPhone").mask("(999) 999-9999")
+	 </script>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('wizard', array('stepnav' => false, 'class' => 'navbar-info text-info'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

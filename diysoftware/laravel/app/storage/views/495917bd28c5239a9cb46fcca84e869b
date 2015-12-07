@@ -1,0 +1,64 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/17/2015
+ * Time: 2:32 AM
+ * Uh stuff.. pass the bitwise for the steps that are loaded.
+ */
+?>
+
+<?php if( !($steps & step1 ) ): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+       <span class="label label-danger">S#1</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#1</span>
+<?php endif; ?>
+
+<?php if( !($steps & step2 )): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+       <span class="label label-danger">S#2</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#2</span>
+<?php endif; ?>
+
+<?php if( !($steps & step3 ) ): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+        <span class="label label-danger">S#3</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#3</span>
+<?php endif; ?>
+<?php if( !($steps & step4 ) ): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+        <span class="label label-danger">S#4</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#4</span>
+<?php endif; ?>
+
+<?php if( !($steps & step5 ) ): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+        <span class="label label-danger">S#5</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#5</span>
+<?php endif; ?>
+
+<?php if( !($steps & step6 ) ): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+        <span class="label label-danger">S#6</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#6</span>
+<?php endif; ?>
+
+<?php if( !($steps & step7 ) ): ?>
+    <?php if(!isset($BrowserCSL) || !$BrowserCSL): ?>
+        <span class="label label-danger">S#7</span>
+    <?php endif; ?>
+<?php else: ?>
+    <span class="label label-success">S#7</span>
+<?php endif; ?>

@@ -1,0 +1,3 @@
+8.05.2015 - Cleaned up installation.
+I moved the old backups to your /home/diysls/diysoftware-backup/ folder.
+I'll keep old copies in this directory every time you send me instructions to update your software.

@@ -1,0 +1,52 @@
+<?php
+ $unique_step_id = 'stepid'.uniqid();
+?>
+<div id="<?php echo $unique_step_id; ?>" class="step-wrapper">
+<div class="stepdef" <?php echo $__env->yieldContent('step'); ?>>
+	<div class="row">
+	        <div class="col-lg-10 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+
+	            <!--      Wizard container        -->
+	            <div class="wizard-container2">
+
+	                <div class="card2 wizard-card2 ct-wizard-red2" id="wizard2">
+
+	                <!--        You can switch "ct-wizard-orange"  with one of the next bright colors: "ct-wizard-blue", "ct-wizard-green", "ct-wizard-orange", "ct-wizard-red"             -->
+                        <div class="mywizardsteptext">
+                        <?php if(isset($stepnav) && $stepnav): ?>
+
+                                <?php echo $__env->make('office.partial.steptext', ['navtitle' => @$__env->yieldContent('wizardtitle'), 'stepnav' => @$stepnav], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                <?php else: ?>
+								<h3 class="page-title page-downarrow" style="text-align:left;">&nbsp; &nbsp; <?php echo $__env->yieldContent('wizardtitle'); ?></h3>
+                        <?php endif; ?>
+
+                        </div>
+
+	                        <div class="content wizard-content">
+
+	                              <div class="row">
+	                              	<div class="col-lg-12 col-xs-12">
+
+
+                                        <div style="padding-left:10px;padding-right:10px;">
+                                            <?php echo $__env->yieldContent('wizardform_open'); ?>
+
+                                            <?php echo $__env->yieldContent('wizardcontent'); ?>
+
+                                            <?php echo $__env->yieldContent('wizardform_close'); ?>
+
+                                        </div>
+
+	                                  </div>
+	                              </div>
+							</div>
+
+	                </div>
+	            </div> <!-- wizard container -->
+	        </div>
+	</div><!-- end row -->
+</div>
+	<script type="text/javascript">
+		setTimeout(function(){ updatephonenumbers('#<?php echo $unique_step_id; ?>'); }, 200);
+	</script>
+</div>

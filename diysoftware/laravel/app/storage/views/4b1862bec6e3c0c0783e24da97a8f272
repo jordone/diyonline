@@ -1,0 +1,33 @@
+<?php
+$unique_id="crm_".uniqid();
+$iframe_id="crm_".uniqid();
+// exit(); # PRZ
+?>
+
+
+<?php $__env->startSection('wizardtitle'); ?>
+CRM Portal
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="stepcrm" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+	<center><h2 style="color:red">Please check your email for your username and password!</h2>
+	 <iframe name="<?php echo $iframe_id; ?>" id="<?php echo $iframe_id; ?>" height="420" width="100%" frameborder="0"></iframe>
+	 <form id="<?php echo $unique_id; ?>" method="POST" action="https://portal.leadtrac.net/diy/Account/LogOn" target="<?php echo $iframe_id; ?>">
+		<input id="UserName" name="UserName" type="hidden" value="<?php echo e($UserName); ?>" />
+		<!-- PRZ Disable auto login <input id="Password" name="Password" type="hidden" value="<?php echo e($Password); ?>" /> -->
+		<input id="RememberMe" name="RememberMe" type="hidden" value="true" />
+		<input type="submit" value="Log On" class="" />
+	 </form>
+
+	 <script>
+		 if ( !(CurrentStepsLoaded & page_crm) )
+			 CurrentStepsLoaded = CurrentStepsLoaded | page_crm;
+
+		 jQuery('*[data-step-number="stepcrm"]').ScrollTo();
+	 jQuery('#<?php echo $unique_id; ?>').submit();
+	 
+	 </script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

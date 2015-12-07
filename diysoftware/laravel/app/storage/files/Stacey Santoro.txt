@@ -1,0 +1,757 @@
+File Source:U.S. DEPARTMENT OF EDUCATION, NATIONAL STUDENT LOAN DATA SYSTEM (NSLDS)
+File Request Date:2015-05-13-10.53.16.902
+Student First Name:STACY
+Student Middle Initial:A
+Student Last Name:MARRA
+Student Street Address 1:
+Student Street Address 2:
+Student City:
+Student State Code:
+Student Country Code:
+Student Zip Code:
+Student Email Address:
+Student Home Phone Country Code:
+Student Home Phone Number:
+Student Home Phone Preferred:
+Student Cell Phone Country Code:
+Student Cell Phone Number:
+Student Cell Phone Preferred:
+Student Work Phone Country Code:
+Student Work Phone Number:
+Student Work Phone Preferred:
+Student SULA MEP Program School Name:
+Student SULA MEP Program Enrollment Status:
+Student SULA MEP Program CIP Title:
+Student SULA MEP Program Credential Level:
+Student SULA MEP Program Begin Date:
+Student SULA MEP Program Length In Years:0.0
+Student SULA Maximum Eligibility Period:0.0
+Student SULA Subsidized Usage Period:0.0
+Student SULA Remaining Eligibility Period:0.0
+Student Enrollment Status:WITHDRAWN
+Student Enrollment Status Effective Date:05/16/2000
+Student Total All Loans Outstanding Principal:$9,280
+Student Total All Loans Outstanding Interest:$20
+Student Pell Lifetime Eligibility Used:242.857%
+Student Total All Grants:$475
+Total FFEL CONSOLIDATED Outstanding Principal:$9,280
+Total FFEL CONSOLIDATED Outstanding Interest:$20
+Total DIRECT STAFFORD UNSUBSIDIZED Outstanding Principal:$0
+Total DIRECT STAFFORD UNSUBSIDIZED Outstanding Interest:$0
+Total DIRECT STAFFORD SUBSIDIZED Outstanding Principal:$0
+Total DIRECT STAFFORD SUBSIDIZED Outstanding Interest:$0
+Total STAFFORD SUBSIDIZED Outstanding Principal:$0
+Total STAFFORD SUBSIDIZED Outstanding Interest:$0
+Total FEDERAL PERKINS Outstanding Principal:$0
+Total FEDERAL PERKINS Outstanding Interest:$0
+Loan Type:FFEL CONSOLIDATED
+Loan Award ID:
+Loan Attending School Name:SCHOOL CODE FOR CONSOLIDATION LOANS
+Loan Attending School OPEID:88888800
+Loan Date:08/25/2003
+Loan Repayment Begin Date:08/25/2003
+Loan Period Begin Date:
+Loan Period End Date:
+Loan Amount:$6,176
+Loan Disbursed Amount:$6,176
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$2,720
+Loan Outstanding Principal Balance as of Date:04/30/2015
+Loan Outstanding Interest Balance:$6
+Loan Outstanding Interest Balance as of Date:04/30/2015
+Loan Interest Rate Type:FIXED
+Loan Interest Rate:3.62%
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:RP
+Loan Status Description:IN REPAYMENT
+Loan Status Effective Date:08/25/2003
+Loan Disbursement Date:08/08/2003
+Loan Disbursement Amount:$6,176
+Loan Contact Type:Current Servicer
+Loan Contact Name:ACS EDUCATION SERVICES
+Loan Contact Street Address 1:ATTN:  BORROWER SERVICES DEPARTMENT
+Loan Contact Street Address 2:P.O. BOX 7051
+Loan Contact City:UTICA
+Loan Contact State Code:NY
+Loan Contact Zip Code:135047051
+Loan Contact Phone Number:800-835-4611
+Loan Contact Phone Extension:
+Loan Contact Email Address:HTTPS://WWW.AFSA.COM/FFEL/FEEDBACK_SSL.HTML
+Loan Contact Web Site Address:
+Loan Contact Type:Current Lender
+Loan Contact Name:JPMORGAN CHASE BANK, NA
+Loan Contact Street Address 1:PO BOX 711004
+Loan Contact Street Address 2:
+Loan Contact City:COLUMBUS
+Loan Contact State Code:OH
+Loan Contact Zip Code:432711004
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:GREAT LAKES HIGHER ED GUARANTY CORP
+Loan Contact Street Address 1:PO BOX 7860
+Loan Contact Street Address 2:
+Loan Contact City:MADISON
+Loan Contact State Code:WI
+Loan Contact Zip Code:537047860
+Loan Contact Phone Number:800-236-4300
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:mygreatlakes.org
+Loan Type:FFEL CONSOLIDATED
+Loan Award ID:
+Loan Attending School Name:SCHOOL CODE FOR CONSOLIDATION LOANS
+Loan Attending School OPEID:88888800
+Loan Date:08/25/2003
+Loan Repayment Begin Date:08/25/2003
+Loan Period Begin Date:
+Loan Period End Date:
+Loan Amount:$14,894
+Loan Disbursed Amount:$14,894
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$6,560
+Loan Outstanding Principal Balance as of Date:04/30/2015
+Loan Outstanding Interest Balance:$14
+Loan Outstanding Interest Balance as of Date:04/30/2015
+Loan Interest Rate Type:FIXED
+Loan Interest Rate:3.62%
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:RP
+Loan Status Description:IN REPAYMENT
+Loan Status Effective Date:08/25/2003
+Loan Disbursement Date:08/08/2003
+Loan Disbursement Amount:$14,894
+Loan Contact Type:Current Servicer
+Loan Contact Name:ACS EDUCATION SERVICES
+Loan Contact Street Address 1:ATTN:  BORROWER SERVICES DEPARTMENT
+Loan Contact Street Address 2:P.O. BOX 7051
+Loan Contact City:UTICA
+Loan Contact State Code:NY
+Loan Contact Zip Code:135047051
+Loan Contact Phone Number:800-835-4611
+Loan Contact Phone Extension:
+Loan Contact Email Address:HTTPS://WWW.AFSA.COM/FFEL/FEEDBACK_SSL.HTML
+Loan Contact Web Site Address:
+Loan Contact Type:Current Lender
+Loan Contact Name:JPMORGAN CHASE BANK, NA
+Loan Contact Street Address 1:PO BOX 711004
+Loan Contact Street Address 2:
+Loan Contact City:COLUMBUS
+Loan Contact State Code:OH
+Loan Contact Zip Code:432711004
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:GREAT LAKES HIGHER ED GUARANTY CORP
+Loan Contact Street Address 1:PO BOX 7860
+Loan Contact Street Address 2:
+Loan Contact City:MADISON
+Loan Contact State Code:WI
+Loan Contact Zip Code:537047860
+Loan Contact Phone Number:800-236-4300
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:mygreatlakes.org
+Loan Type:DIRECT STAFFORD UNSUBSIDIZED
+Loan Award ID:*****6325U00G02667001
+Loan Attending School Name:DOWLING COLLEGE
+Loan Attending School OPEID:00266700
+Loan Date:09/08/1999
+Loan Repayment Begin Date:11/17/2000
+Loan Period Begin Date:09/08/1999
+Loan Period End Date:05/16/2000
+Loan Amount:$7,348
+Loan Disbursed Amount:$7,348
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:08/16/2003
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:08/16/2003
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PN
+Loan Status Description:NON-DEFAULTED, PAID IN FULL THROUGH CONSOLIDATION LOAN
+Loan Status Effective Date:08/16/2003
+Loan Status:RP
+Loan Status Description:IN REPAYMENT
+Loan Status Effective Date:11/17/2000
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:09/08/1999
+Loan Disbursement Date:01/31/2000
+Loan Disbursement Amount:$3,674
+Loan Disbursement Date:09/08/1999
+Loan Disbursement Amount:$3,674
+Loan Contact Type:Current ED Servicer
+Loan Contact Name:DIRECT LOAN SERVICING CENTER (ACS)
+Loan Contact Street Address 1:P.O. BOX 5609
+Loan Contact Street Address 2:
+Loan Contact City:GREENVILLE
+Loan Contact State Code:TX
+Loan Contact Zip Code:754035609
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:DIRECT STAFFORD SUBSIDIZED
+Loan Award ID:*****6325S00G02667001
+Loan Attending School Name:DOWLING COLLEGE
+Loan Attending School OPEID:00266700
+Loan Date:09/08/1999
+Loan Repayment Begin Date:11/17/2000
+Loan Period Begin Date:09/08/1999
+Loan Period End Date:05/16/2000
+Loan Amount:$8,500
+Loan Disbursed Amount:$8,500
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:08/16/2003
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:08/16/2003
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PN
+Loan Status Description:NON-DEFAULTED, PAID IN FULL THROUGH CONSOLIDATION LOAN
+Loan Status Effective Date:08/16/2003
+Loan Status:RP
+Loan Status Description:IN REPAYMENT
+Loan Status Effective Date:11/17/2000
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:09/08/1999
+Loan Disbursement Date:01/31/2000
+Loan Disbursement Amount:$4,250
+Loan Disbursement Date:09/08/1999
+Loan Disbursement Amount:$4,250
+Loan Contact Type:Current ED Servicer
+Loan Contact Name:DIRECT LOAN SERVICING CENTER (ACS)
+Loan Contact Street Address 1:P.O. BOX 5609
+Loan Contact Street Address 2:
+Loan Contact City:GREENVILLE
+Loan Contact State Code:TX
+Loan Contact Zip Code:754035609
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:DIRECT STAFFORD SUBSIDIZED
+Loan Award ID:*****6325S99G02667001
+Loan Attending School Name:DOWLING COLLEGE
+Loan Attending School OPEID:00266700
+Loan Date:10/29/1998
+Loan Repayment Begin Date:11/17/2000
+Loan Period Begin Date:09/09/1998
+Loan Period End Date:05/15/1999
+Loan Amount:$5,822
+Loan Disbursed Amount:$5,822
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:08/16/2003
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:08/16/2003
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PN
+Loan Status Description:NON-DEFAULTED, PAID IN FULL THROUGH CONSOLIDATION LOAN
+Loan Status Effective Date:08/16/2003
+Loan Status:RP
+Loan Status Description:IN REPAYMENT
+Loan Status Effective Date:11/17/2000
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:09/09/1998
+Loan Disbursement Date:12/26/1998
+Loan Disbursement Amount:$2,911
+Loan Disbursement Date:10/29/1998
+Loan Disbursement Amount:$2,911
+Loan Contact Type:Current ED Servicer
+Loan Contact Name:DIRECT LOAN SERVICING CENTER (ACS)
+Loan Contact Street Address 1:P.O. BOX 5609
+Loan Contact Street Address 2:
+Loan Contact City:GREENVILLE
+Loan Contact State Code:TX
+Loan Contact Zip Code:754035609
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:DIRECT STAFFORD SUBSIDIZED
+Loan Award ID:*****6325S98G02667001
+Loan Attending School Name:DOWLING COLLEGE
+Loan Attending School OPEID:00266700
+Loan Date:05/07/1998
+Loan Repayment Begin Date:11/17/2000
+Loan Period Begin Date:01/05/1998
+Loan Period End Date:05/15/1998
+Loan Amount:$4,561
+Loan Disbursed Amount:$4,561
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:08/16/2003
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:08/16/2003
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PN
+Loan Status Description:NON-DEFAULTED, PAID IN FULL THROUGH CONSOLIDATION LOAN
+Loan Status Effective Date:08/16/2003
+Loan Status:RP
+Loan Status Description:IN REPAYMENT
+Loan Status Effective Date:11/17/2000
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:01/05/1998
+Loan Disbursement Date:05/07/1998
+Loan Disbursement Amount:$4,561
+Loan Contact Type:Current ED Servicer
+Loan Contact Name:DIRECT LOAN SERVICING CENTER (ACS)
+Loan Contact Street Address 1:P.O. BOX 5609
+Loan Contact Street Address 2:
+Loan Contact City:GREENVILLE
+Loan Contact State Code:TX
+Loan Contact Zip Code:754035609
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:STAFFORD SUBSIDIZED
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:05/13/1995
+Loan Repayment Begin Date:06/24/1997
+Loan Period Begin Date:06/01/1995
+Loan Period End Date:05/30/1996
+Loan Amount:$5,500
+Loan Disbursed Amount:$5,500
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:05/30/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:05/30/1997
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:05/30/1997
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:06/01/1995
+Loan Disbursement Date:09/11/1995
+Loan Disbursement Amount:$2,750
+Loan Disbursement Date:05/22/1995
+Loan Disbursement Amount:$2,750
+Loan Contact Type:Current Lender
+Loan Contact Name:CITIBANK ELT STUDENT LOAN CORP
+Loan Contact Street Address 1:P.O. BOX 6157
+Loan Contact Street Address 2:
+Loan Contact City:SIOUS FALLS
+Loan Contact State Code:SD
+Loan Contact Zip Code:571170000
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:NEW YORK STATE HIGHER EDUCATION SERVICES
+Loan Contact Street Address 1:HESC
+Loan Contact Street Address 2:99 WASHINGTON AVE.
+Loan Contact City:ALBANY
+Loan Contact State Code:NY
+Loan Contact Zip Code:12255
+Loan Contact Phone Number:888-697-4372
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:STAFFORD SUBSIDIZED
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:03/02/1995
+Loan Repayment Begin Date:06/24/1997
+Loan Period Begin Date:01/05/1995
+Loan Period End Date:05/30/1995
+Loan Amount:$2,750
+Loan Disbursed Amount:$2,750
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:05/30/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:05/30/1997
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:05/30/1997
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:01/05/1995
+Loan Disbursement Date:03/20/1995
+Loan Disbursement Amount:$1,375
+Loan Disbursement Date:03/06/1995
+Loan Disbursement Amount:$1,375
+Loan Contact Type:Current Lender
+Loan Contact Name:CITIBANK ELT STUDENT LOAN CORP
+Loan Contact Street Address 1:P.O. BOX 6157
+Loan Contact Street Address 2:
+Loan Contact City:SIOUS FALLS
+Loan Contact State Code:SD
+Loan Contact Zip Code:571170000
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:NEW YORK STATE HIGHER EDUCATION SERVICES
+Loan Contact Street Address 1:HESC
+Loan Contact Street Address 2:99 WASHINGTON AVE.
+Loan Contact City:ALBANY
+Loan Contact State Code:NY
+Loan Contact Zip Code:12255
+Loan Contact Phone Number:888-697-4372
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:STAFFORD SUBSIDIZED
+Loan Award ID:
+Loan Attending School Name:NASSAU COMMUNITY COLLEGE
+Loan Attending School OPEID:00287300
+Loan Date:12/21/1994
+Loan Repayment Begin Date:06/24/1997
+Loan Period Begin Date:09/01/1994
+Loan Period End Date:05/12/1995
+Loan Amount:$2,000
+Loan Disbursed Amount:$1,000
+Loan Canceled Amount:$1,000
+Loan Canceled Date:06/14/1995
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:05/30/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:05/30/1997
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:05/30/1997
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:09/01/1994
+Loan Disbursement Date:03/29/1995
+Loan Disbursement Amount:$1,000
+Loan Contact Type:Current Lender
+Loan Contact Name:CITIBANK ELT STUDENT LOAN CORP
+Loan Contact Street Address 1:P.O. BOX 6157
+Loan Contact Street Address 2:
+Loan Contact City:SIOUS FALLS
+Loan Contact State Code:SD
+Loan Contact Zip Code:571170000
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:NEW YORK STATE HIGHER EDUCATION SERVICES
+Loan Contact Street Address 1:HESC
+Loan Contact Street Address 2:99 WASHINGTON AVE.
+Loan Contact City:ALBANY
+Loan Contact State Code:NY
+Loan Contact Zip Code:12255
+Loan Contact Phone Number:888-697-4372
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:STAFFORD SUBSIDIZED
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:08/11/1993
+Loan Repayment Begin Date:06/24/1997
+Loan Period Begin Date:09/01/1993
+Loan Period End Date:05/30/1994
+Loan Amount:$3,500
+Loan Disbursed Amount:$3,500
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:05/30/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:05/30/1997
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:05/30/1997
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:09/01/1993
+Loan Disbursement Date:12/06/1993
+Loan Disbursement Amount:$3,500
+Loan Contact Type:Current Lender
+Loan Contact Name:CITIBANK ELT STUDENT LOAN CORP
+Loan Contact Street Address 1:P.O. BOX 6157
+Loan Contact Street Address 2:
+Loan Contact City:SIOUS FALLS
+Loan Contact State Code:SD
+Loan Contact Zip Code:571170000
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:NEW YORK STATE HIGHER EDUCATION SERVICES
+Loan Contact Street Address 1:HESC
+Loan Contact Street Address 2:99 WASHINGTON AVE.
+Loan Contact City:ALBANY
+Loan Contact State Code:NY
+Loan Contact Zip Code:12255
+Loan Contact Phone Number:888-697-4372
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:FEDERAL PERKINS
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:08/01/1993
+Loan Repayment Begin Date:03/01/1997
+Loan Period Begin Date:07/01/1993
+Loan Period End Date:06/30/1994
+Loan Amount:$750
+Loan Disbursed Amount:$750
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:06/02/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:
+Loan Interest Rate Type:
+Loan Interest Rate:5.00%
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:06/02/1997
+Loan Disbursement Date:01/01/1994
+Loan Disbursement Amount:$750
+Loan Contact Type:Current Servicer
+Loan Contact Name:SAINT JOHN'S UNIVERSITY
+Loan Contact Street Address 1:8000 UTOPIA PARKWAY
+Loan Contact Street Address 2:
+Loan Contact City:JAMAICA
+Loan Contact State Code:NY
+Loan Contact Zip Code:114391343
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:STAFFORD SUBSIDIZED
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:08/04/1992
+Loan Repayment Begin Date:06/24/1997
+Loan Period Begin Date:09/01/1992
+Loan Period End Date:05/30/1993
+Loan Amount:$850
+Loan Disbursed Amount:$850
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:05/30/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:05/30/1997
+Loan Interest Rate Type:VARIABLE
+Loan Interest Rate:
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:05/30/1997
+Loan Status:ID
+Loan Status Description:IN SCHOOL OR GRACE PERIOD
+Loan Status Effective Date:09/01/1992
+Loan Disbursement Date:12/04/1992
+Loan Disbursement Amount:$850
+Loan Contact Type:Current Lender
+Loan Contact Name:CITIBANK ELT STUDENT LOAN CORP
+Loan Contact Street Address 1:P.O. BOX 6157
+Loan Contact Street Address 2:
+Loan Contact City:SIOUS FALLS
+Loan Contact State Code:SD
+Loan Contact Zip Code:571170000
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Contact Type:Current Guaranty Agency
+Loan Contact Name:NEW YORK STATE HIGHER EDUCATION SERVICES
+Loan Contact Street Address 1:HESC
+Loan Contact Street Address 2:99 WASHINGTON AVE.
+Loan Contact City:ALBANY
+Loan Contact State Code:NY
+Loan Contact Zip Code:12255
+Loan Contact Phone Number:888-697-4372
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:FEDERAL PERKINS
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:08/01/1992
+Loan Repayment Begin Date:03/01/1997
+Loan Period Begin Date:07/01/1992
+Loan Period End Date:06/30/1993
+Loan Amount:$1,500
+Loan Disbursed Amount:$1,500
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:06/02/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:
+Loan Interest Rate Type:
+Loan Interest Rate:5.00%
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:06/02/1997
+Loan Disbursement Date:01/01/1993
+Loan Disbursement Amount:$1,500
+Loan Contact Type:Current Servicer
+Loan Contact Name:SAINT JOHN'S UNIVERSITY
+Loan Contact Street Address 1:8000 UTOPIA PARKWAY
+Loan Contact Street Address 2:
+Loan Contact City:JAMAICA
+Loan Contact State Code:NY
+Loan Contact Zip Code:114391343
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Loan Type:FEDERAL PERKINS
+Loan Award ID:
+Loan Attending School Name:SAINT JOHN'S UNIVERSITY
+Loan Attending School OPEID:00282300
+Loan Date:08/01/1991
+Loan Repayment Begin Date:03/01/1997
+Loan Period Begin Date:07/01/1991
+Loan Period End Date:06/30/1992
+Loan Amount:$1,500
+Loan Disbursed Amount:$1,500
+Loan Canceled Amount:$0
+Loan Canceled Date:
+Loan Outstanding Principal Balance:$0
+Loan Outstanding Principal Balance as of Date:06/02/1997
+Loan Outstanding Interest Balance:$0
+Loan Outstanding Interest Balance as of Date:
+Loan Interest Rate Type:
+Loan Interest Rate:5.00%
+Loan Repayment Plan Begin Date:
+Loan Repayment Plan Scheduled Amount:
+Loan Confirmed Subsidy Status:
+Loan Subsidized Usage in Years:
+Loan Reaffirmation Date:
+Loan Status:PF
+Loan Status Description:PAID IN FULL
+Loan Status Effective Date:06/02/1997
+Loan Disbursement Date:01/01/1992
+Loan Disbursement Amount:$1,500
+Loan Contact Type:Current Servicer
+Loan Contact Name:SAINT JOHN'S UNIVERSITY
+Loan Contact Street Address 1:8000 UTOPIA PARKWAY
+Loan Contact Street Address 2:
+Loan Contact City:JAMAICA
+Loan Contact State Code:NY
+Loan Contact Zip Code:114391343
+Loan Contact Phone Number:
+Loan Contact Phone Extension:
+Loan Contact Email Address:
+Loan Contact Web Site Address:
+Grant Type:FEDERAL PELL GRANT
+Grant Attending School Name:SAINT JOHN'S UNIVERSITY
+Grant Attending School OPEID:00282300
+Grant Award Year:1994 - 1995
+Grant Scheduled Amount:$950
+Grant Award Amount:$0
+Grant Disbursed Amount:$475
+Grant Remaining Amount to be Paid:$475
+Grant First Time:No
+Grant Additional Eligibility:N/A
+Grant Contact Type:Attending School
+Grant Contact Name:SAINT JOHN'S UNIVERSITY
+Grant Contact Street Address 1:8000 UTOPIA PARKWAY
+Grant Contact Street Address 2:
+Grant Contact City:JAMAICA
+Grant Contact State Code:NY
+Grant Contact Zip Code:114391343

@@ -1,0 +1,85 @@
+<?php $__env->startSection('wizardtitle'); ?>
+<?php echo STEP3_TITLE; ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="step3" id="step3" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+    <?php echo $__env->make('snipplets.steps_header_text', ['step' => 'STEP3'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+	<h3> The following information is needed in order to access your Federal Student Loans directly from the Department of Education.</h3>
+	
+
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo Form::open(array('url' => 'step3f', 'class' => 'form-horizontal ajaxcheck')); ?>
+
+    <?php else: ?>
+        <div class="form form-horizontal">
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+
+		<?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  
+	  <div class="form-group">
+	    <label for="dob" class="col-sm-3 control-label">Your Date of Birth</label>
+	    <div class="col-sm-5"><input  pattern="[^\!\@\#\$\%\^\&\*\<;\>]*"  type="text" name="dob" class="form-control" id="dob" placeholder="Enter your Date of Birth (mm/dd/yyyy)" value="<?php echo $client->TProperties->Name1DOB; ?>" required></div>
+	  </div>
+
+	<div class="form-group">
+		<label for="ssn" class="col-sm-3 control-label">Last 4 of your SSN</label>
+		<div class="col-sm-5"><input  pattern="[^\!\@\#\$\%\^\&\*\<;\>]*"  type="text" name="ssn" class="form-control" id="ssn2" placeholder="Enter the 4 digits of your ssn" value="<?php echo $client->TProperties->Name1SSN; ?>" required></div>
+	</div>
+
+
+	  <div class="form-group">
+	    <label for="address1" class="col-sm-3 control-label">Mailing Address</label>
+	    <div class="col-sm-9"><input  pattern="[^\!\@\#\$\%\^\&\*\<;\>]*"  type="text" name="address1" class="form-control" id="address1" placeholder="Enter your Home Address" value="<?php echo $client->TProperties->AddressLine1; ?>" required></div>
+	  </div>
+
+    <div class="form-group">
+        <label for="city" class="col-sm-3 control-label">City</label>
+        <div class="col-sm-2"><input type="text" name="city" class="form-control" id="city" placeholder="City" value="<?php echo e($client->TProperties->City); ?>" required></div>
+        <label for="state" class="col-sm-1 control-label">State</label>
+        <div class="col-sm-2">
+            <?php echo Form::stateSelect('state', $client->TProperties->State, ["class" => "form-control required"]); ?>
+
+        </div>
+
+        <label for="zip" class="col-sm-1 control-label">Zip</label>
+        <div class="col-sm-2"><input type="text" name="zip" class="form-control" id="zip" placeholder="Zip Code" value="<?php echo e($client->TProperties->ZipCode); ?>" required></div>
+    </div>
+
+    <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+             <p class="text-danger"> Please enter your permanent address (number, street, apartment number, or rural route number and box number, then city, state, and zip code). MUST BE A PHYSICAL ADDRESS (P.O BOXES WILL NOT BE ACCEPTED) </p>
+          </div>
+        </div>
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo $__env->make('steps.partials.submit', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::close(); ?>
+
+        <?php else: ?>
+        </div>
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+	 <script>
+		 if ( !(CurrentStepsLoaded & step3) )
+			 CurrentStepsLoaded = CurrentStepsLoaded | step3;
+
+	 var prevElem = jQuery('*[data-step-number="step3"]').ScrollTo().prev(":first");
+//	 jQuery('.wizard-content',prevElem).slideUp();
+
+$("#dob").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+$("#ssn").mask("999-99-9999");
+$("#ssn2").mask("9999", {placeholder:"*"});
+
+	 
+	 </script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('wizard', array('stepnav' => false, 'class' => 'navbar-info text-info'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

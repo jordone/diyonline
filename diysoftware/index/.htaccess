@@ -1,0 +1,27 @@
+
+### No one is allowed to access our office_passwords.txt files.
+
+<FilesMatch "(\.office_passwords\.txt)$">
+Order Deny,allow
+Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+		
+    # Deny office password access
+    RewriteRule ^(\.office_passwords\.txt)$ - [F,L]
+    
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+ModPagespeed on

@@ -1,0 +1,54 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/1/2015
+ * Time: 1:55 AM
+ */
+?>
+
+
+<?php $__env->startSection('wizardtitle'); ?>
+   <i class="fa fa-spinner fa-spin"></i> Search in progress
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="searching" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php echo Form::open(array('url' => 'office/search', 'class' => 'ajaxcheck form-horizontal submitonload')); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<p class="lead">This may take a few moments to process your request. Please do not leave or refresh this page, your search results will show up automatically</p>
+
+<div class="well well-sm form-group form-disable disable disabled">
+    <label for="fn22" class="col-sm-2 control-label">Search by name</label>
+    <div class="col-sm-4"><input type="text" name="firstname" class="form-control" id="fn22" placeholder="First Name" value="<?php echo Input::get('firstname'); ?>" ></div>
+    <div class="col-sm-4"><input type="text" name="lastname" class="form-control" id="fn23" placeholder="Last Name" value="<?php echo Input::get('lastname'); ?>"></div>
+    <div class="col-sm-2">
+        <button type="button" class="formsubmitter btn btn-info" disabled="disabled" ><i class="fa fa-spinner fa-spin"></i> Searching</button>
+    </div>
+</div>
+
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+
+<script>
+
+    jQuery('*[data-step-number="recentclients"]').parents('.step-wrapper').remove();
+    jQuery('*[data-step-number="searchresults"]').parents('.step-wrapper').remove();
+    var prevElem = jQuery('*[data-step-number="searching"]').ScrollTo().prev(":first");
+
+    jQuery(document).ready(function(){
+        jQuery('.submitonload').trigger('submit');
+    });
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

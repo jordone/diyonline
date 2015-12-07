@@ -1,0 +1,32 @@
+<?php	  		
+$product_name = "Re-Certification of Income Based Repayment Plan / Re-Calculate My Current Repayment Plan:";
+$product_price = number_format(PRICE_RECERTIFICATION_APP,2);
+$product_formname = "recertification_app";
+$product_sessionname = "ordered_recertification";
+$product_description = " [Re-Certification] This income based re-certification application will assist you in submitting your annual documentation for the re-calculation of your monthly payment amount under the repayment plan you currently have.
+<br/>[Re-Calculation] This income based re-calculation application will assist you, if you are requesting that your loan holder recalculates your current monthly payment amount du to changes in your finical circumstances. ";
+
+$product_in_cart= false;
+$product_purchased_already = false;
+
+if (isset($client) && isset($client->TProperties->products_already_purchased) && $client->TProperties->products_already_purchased & cart_product_recertification_app )
+    $purchased['recertification_app'] = true;
+
+if (isset($client) && isset($client->TProperties->cart_items) && $client->TProperties->cart_items & cart_product_recertification_app )
+    $product_in_cart = true;
+
+
+if (isset($purchased) && is_array($purchased) && isset($purchased['recertification_app']) && $purchased['recertification_app'] == true)
+{
+    $product_purchased_already = true;
+}
+
+    if (isset($cart_items) && $cart_items & cart_product_recertification_app)
+    $product_in_cart = true;
+
+
+
+?>
+@if ($product_price >= 0)
+@include('products.product_wrapper')
+@endif

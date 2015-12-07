@@ -1,0 +1,42 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/1/2015
+ * Time: 2:54 AM
+ */
+
+$form_class = uniqid();
+?>
+
+
+<?php $__env->startSection('wizardtitle'); ?>
+    Error, 404. Page not found.
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="step91" <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('wizardcontent'); ?>
+
+
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php echo Form::open(array('url' => 'crm', 'method' => 'GET', 'class' => 'form-horizontal ajaxcheck '.$form_class.'')); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<h3 style="text-align:center;">The page you have requested can not be loaded</h3>
+<p class="text-info text-center">This is because the resource you have requested does not exists or you have mispelled the page url.
+    Please contact us if the problem persist. Thank you!</p>
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+
+<script>
+    var prevElem = jQuery('*[data-step-number="step91"]').ScrollTo().prev(":first");
+    //	 jQuery('.wizard-content',prevElem).slideUp();
+</script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

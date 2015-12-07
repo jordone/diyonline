@@ -1,0 +1,207 @@
+.displaytextonsteps a {
+	color: #ff0000 !important;
+}
+
+.displaytextonsteps {
+	font-size:22px !important;
+	color: #0082ff !important;
+	 
+}
+.planbg {
+		font-size:20px;
+		color: #444444;
+		background: url('/packages/static/payment_opt_bg.png') bottom left repeat-x;
+		height:60px;
+		padding-top:5px;
+		padding-left:20px;
+		padding-bottom:25px; 
+		vertical-align:middle !important;
+	}
+	.planbg {
+		vertical-align:middle !important;
+	}
+.CartProgram {
+
+	border:1px solid #0082fe;
+	border-width: 0px 0px 3px 0px;
+}
+.cartitem .cartlabel {
+	font-size:20px;
+	color: #125280;
+}
+.cartitem .cartredprice sup {
+font-size:10px; 
+}
+.cartitem .cartredprice {
+ color: red;
+}
+.cartitem .cartdesc {
+	color: #125280;
+	font-size:12px;
+	font-weight:bold;
+	max-width:600px;
+}
+.cartitem .cartincludes {
+font-weight:normal;
+margin-left:40px; 
+line-height:20px;
+}
+.cibgblue {
+background-color: #125280;
+color:#FFF;
+padding:2px;
+border-radius:4px;
+}
+
+
+#logo_container {
+	background-color:#ffffff;
+	background: #ffffff none repeat scroll 0 0;	
+	border:1px solid #0082fe;
+	border-width: 3px 0px 3px 0px;
+    color:#0082fe;
+
+}
+#logo_container .page-title {
+    color: #0082fe !important;
+    font-size:18px !important;
+}
+/** Step Container, bg, text, border **/
+.mywizardsteptext {
+	background-color: #0082fe;
+	background: #0082fe none repeat scroll 0 0;		
+	border:1px solid #4d4d4d;
+	padding-top:2px;
+	border-width: 0px 0px 3px 0px;
+	color: #ffffff;
+}
+
+/** Checkbox **/
+input[type="checkbox"] + label::before {
+	color: #0082fe;
+}
+
+/** Loader BG color **/
+.pace .pace-activity {
+	background:  none repeat scroll 0 0;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: #0082fe;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+  transform: translateX(100%) translateY(-100%) rotate(45deg);
+  pointer-events: none;
+}
+
+.pace.pace-active .pace-activity {
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
+}
+
+.pace .pace-activity::before,
+.pace .pace-activity::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: block;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    content: '';
+}
+
+.pace .pace-activity::before {
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-right-color: rgba(0, 0, 0, .2);
+    border-left-color: rgba(0, 0, 0, .2);
+    -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
+    animation: pace-theme-corner-indicator-spin 3s linear infinite;
+}
+
+.pace .pace-activity::after {
+    bottom: 50px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    border-top-color: rgba(0, 0, 0, .2);
+    border-bottom-color: rgba(0, 0, 0, .2);
+    -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+    animation: pace-theme-corner-indicator-spin 1s linear infinite;
+} 
+
+@-webkit-keyframes pace-theme-corner-indicator-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@keyframes pace-theme-corner-indicator-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+
+.bs-callout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #c0c0c0;
+    background-color: #fcf8e3;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin: 7px 0;
+    padding: 7px;
+}
+.bs-callout h4 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout + .bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+.bs-callout-danger h4 {
+    color: #ce4844;
+}
+.bs-callout-warning {
+    border-left-color: #aa6708;
+}
+.bs-callout-warning h4 {
+    color: #aa6708;
+}
+.bs-callout-info {
+    border-left-color: #042e56;
+}
+.bs-callout-info h4 {
+    color: #042e56;
+}

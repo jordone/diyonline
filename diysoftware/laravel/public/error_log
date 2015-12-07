@@ -1,0 +1,1 @@
+[18-Dec-2014 12:23:16 EST] PHP Fatal error:  Class 'Post' not found in /home/pledesma/public_html/diy/laravel/app/controllers/ClientController.php on line 25

@@ -1,0 +1,44 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/1/2015
+ * Time: 1:55 AM
+ */
+?>
+
+
+<?php $__env->startSection('wizardtitle'); ?>
+    Viewing Customer
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="documentview" id="docviewsheader" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php echo Form::open(array('url' => 'office/results', 'class' => 'form-horizontal ajaxcheck')); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<div class="list-group">
+    <div class="list-group-item">
+      <?php echo $__env->make('office.partial.client', array('client' => $client, 'HideDocumentLink' => true), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div>
+</div>
+
+<?php echo $__env->make('office.partial.stepnav',array('client' => $client), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<style>
+    #docviewsheader .mywizardsteptext { display: none; }
+
+</style>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

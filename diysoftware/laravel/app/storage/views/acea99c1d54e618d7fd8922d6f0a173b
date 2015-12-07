@@ -1,0 +1,59 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/16/2015
+ * Time: 11:18 PM
+ */
+?>
+
+
+<?php $__env->startSection('wizardtitle'); ?>
+    Recently Updated Documents
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('step'); ?> data-step-number="recentclients" <?php $__env->stopSection(); ?>
+<?php $__env->startSection('wizardcontent'); ?>
+
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php echo Form::open(array('url' => 'office/selectfile', 'class' => 'form-horizontal')); ?>
+
+<?php $__env->stopSection(); ?>
+<h4 class="text-center">These documents have been recently updated.</h4>
+
+<div class="recentclients">
+    <?php if(isset($recentclients) && is_array($recentclients)): ?>
+        <ul class="list-group">
+
+        <?php foreach($recentclients as $c_file): ?>
+                <li class="list-group-item">
+                <?php echo $__env->make('office.partial.client', array('client' => $c_file), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                </li>
+
+            <?php endforeach; ?>
+
+        </ul>
+        <?php else: ?>
+
+        <div class="alert alert-warning">
+            Hmm, no one has created or updated their documents in the last 24 hours.
+        </div>
+
+    <?php endif; ?>
+</div>
+
+
+
+<?php $__env->startSection('wizardform_close'); ?>
+    <?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+
+<script>
+//    var prevElem = jQuery('*[data-step-number="office1s"]').ScrollTo().prev(":first");
+jQuery('*[data-step-number="searching"]').remove();
+
+</script>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('wizard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

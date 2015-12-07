@@ -1,0 +1,91 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Banworks
+ * Date: 9/16/2015
+ * Time: 11:32 PM
+ */
+?>
+<div class="card row ">
+    <div class="col-sm-1 col-md-1 col-xs-1">
+        <?php if(isset($client->TStatus->Accounting)): ?>
+            <?php if($client->TStatus->Accounting->status == '100% Payments Received'): ?>
+                <span class="label label-success"><a href="#" data-toggle="tooltip"  title="Status: <?php echo $client->TStatus->Accounting->status; ?>"><i class="fa fa-stop"></i></a></span>
+            <?php elseif(strstr($client->TStatus->Accounting->status, 'Declined')): ?>
+                <span class="label label-danger"><a href="#" data-toggle="tooltip" title="Status: <?php echo $client->TStatus->Accounting->status; ?>"><i class="fa fa-stop"></i></a></span>
+            <?php elseif(strstr($client->TStatus->Accounting->status, 'Process')): ?>
+                <span class="label label-info"><a href="#" data-toggle="tooltip" title="Status: <?php echo $client->TStatus->Accounting->status; ?>"><i class="fa fa-stop"></i></a></span>
+            <?php else: ?>
+                <span class="label label-warning"><a href="#" data-toggle="tooltip" title="Status: <?php echo $client->TStatus->Accounting->status; ?>"><i class="fa fa-stop"></i></a></span>
+
+            <?php endif; ?>
+        <?php else: ?>
+            <span class="label label-warning"><a href="#" data-toggle="tooltip" title="Status: <?php echo $client->TStatus->Sales->status; ?>"><i class="text-warning fa fa-stop"></i></a></span>
+        <?php endif; ?>
+    </div>
+        <div class="col-sm-7 col-md-7 col-xs-11">
+
+        <?php if(isset($client->NextStep)): ?>
+            <?php if($client->NextStep == "8"): ?>
+                <span class="badge pull-right">COMPLETED</span>
+                <?php else: ?>
+
+                <span class="badge pull-right"><?php echo "Step ".$client->NextStep; ?></span>
+            <?php endif; ?>
+        <?php else: ?>
+            <span class="label label-default bg-danger pull-right">N/A</span>
+        <?php endif; ?>
+            <?php if( $client->TDates->UpdatedMinutesAgo <= 5): ?>
+
+                <?php /*<span class="label label-success">ONLINE</span>*/ ?>
+
+            <?php endif; ?>
+    <span style="font-size:18px; text-transform: uppercase;">
+        <?php echo e($client->TProperties->FirstName); ?> <?php echo e($client->TProperties->LastName); ?>
+
+    </span>
+
+        <hr style="margin:0px;">
+            <?php if( $client->TDates->UpdatedMinutesAgo <= 5): ?>
+                <?php if($client->TDates->UpdatedMinutesAgo <= 0): ?>
+                    <b>Seen online right now</b>
+                <?php else: ?>
+                    <b>Seen about <?php echo $client->TDates->UpdatedMinutesAgo; ?> minutes ago</b>
+                <?php endif; ?>
+
+             <?php else: ?>
+                <span class="text-muted">
+                    Last updated <?php echo $client->TDates->UpdatedOn; ?> [<?php echo $client->TDates->UpdatedMinutesAgo; ?> minutes ago]
+                </span>
+            <?php endif; ?>
+
+            <?php if(floor( (time() -  $client->Generated_UTIME) / 60) > 0): ?>
+            <font size="-2" class="">[i/o <?php echo floor( (time() -  $client->Generated_UTIME) / 60); ?> min]</font>
+            <?php endif; ?>
+
+            <?php if(!isset($HideDocumentLink) || isset($HideDocumentLink) && $HideDocumentLink != true): ?>
+            <br/>
+            <a href="<?php echo URL::To('/office/view', array('file' => $client->FileNumber)); ?>" class=""><i class="fa fa-goggles"></i> View Document</a> |
+            <a href="<?php echo URL::To('/office/merchant/signup', array('file' => $client->FileNumber)); ?>" class=""><i class="fa fa-cash"></i> Open in Merchant</a>
+            <?php endif; ?>
+
+            <?php if(isset($MerchantCloseFileLink) && $MerchantCloseFileLink): ?>            <br/>
+
+            <a href="<?php echo URL::To('/office/merchant/close'); ?>" class=""><i class="fa fa-close"></i> Close Client File</a>
+            <?php endif; ?>
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-xs-12">
+        <div class="progress" style="height:25px;">
+            <?php if($client->TDates->UpdatedMinutesAgo <= 60 && isset($client->TProperties->BrowserCSL)): ?>
+                <?php echo $__env->make('office.partial.steps', array('steps' => $client->TProperties->BrowserCSL, 'BrowserCSL' => true), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php else: ?>
+                <?php echo $__env->make('office.partial.steps', array('steps' => $client->TProperties->completed_steps_bitwise, 'BrowserCSL' => false), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+</div>
+
+

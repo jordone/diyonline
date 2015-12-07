@@ -1,0 +1,51 @@
+
+<div class="CartProgram">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="row">
+			  	<div class="col-sm-1 col-xs-2 col-md-1 text-right" style="padding:0px 0px 0px 10px;">		
+			  		<?php if(isset($product_purchased_already) && $product_purchased_already == true): ?>
+					<input class="paid_already" type="checkbox" name="" value="1" data-price="0.00" id="<?php echo $product_formname; ?>" checked="checked" disabled>
+			  		<?php else: ?>
+			 		<input type="checkbox" name="<?php echo $product_formname; ?>" id="<?php echo $product_formname; ?>" value="1" data-price="<?php echo $product_price; ?>" <?php echo ($product_in_cart == true ? "checked='checked'" : ""); ?>>
+					<?php endif; ?>	
+					<label class="checkbox-label" for="<?php echo $product_formname; ?>" style="margin:0px;padding-left:10px;">&nbsp;</label>				
+				</div>
+				<div class="col-xs-10 col-md-11 col-sm-11">
+					<label class="checkbox-label" for="<?php echo $product_formname; ?>">						
+		 
+					  		<?php if(defined('OFFICE_DISPLAY_SERVICE_PRICES') && OFFICE_DISPLAY_SERVICE_PRICES == 'yes'): ?>
+								<?php if(isset($product_purchased_already) && $product_purchased_already == true): ?>
+								 <b>$0.00</b> &nbsp;
+								 <?php else: ?>
+								 <?php echo sprintf(OFFICE_DISPLAY_SERVICE_PRICE_TEXTF,$product_price); ?> 
+								<?php endif; ?> 
+								<?php else: ?>
+								<?php /* Check if they have already purchased it. */ ?>
+									<?php if(isset($product_purchased_already) && $product_purchased_already == true): ?>
+										<b>$0.00</b> &nbsp;
+									<?php else: ?>
+
+									<?php endif; ?>
+					  		<?php endif; ?>
+				  		<b><?php echo rtrim(htmlspecialchars($product_name),':'); ?></b>
+					 </label>
+					
+					<div class="" style="font-size:11px;padding-bottom:5px;">
+					  	<?php echo $product_description; ?>
+
+
+						<?php if(isset($product_purchased_already) && $product_purchased_already == true): ?>
+							<br/><br/>
+							You have already purchased this document. Thank you!
+						<?php endif; ?>
+
+						<br/>
+					</div>					 
+					 	
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

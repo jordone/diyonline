@@ -1,0 +1,62 @@
+<?php $__env->startSection('wizardtitle', "Checkout"); ?>
+<?php $__env->startSection('step', 'data-step-number="merchant3"'); ?>
+<?php $__env->startSection('wizardform_open'); ?>
+    <?php if(isset($update_enabled) && $update_enabled): ?>
+        <?php echo Form::open(array('url' => 'office/merchant/payments/save/'.(isset($client->FileNumber) && $client->FileNumber ? $client->FileNumber : ''), 'class' => 'form-horizontal')); ?>
+
+    <?php else: ?>
+        <div class="form form-horizontal">
+
+            <?php endif; ?>
+            <?php $__env->stopSection(); ?>
+
+            <?php $__env->startSection('wizardform_close'); ?>
+                <?php if(isset($update_enabled) && $update_enabled): ?>
+                    <!-- JE <?php echo $__env->make('steps.partials.submit', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
+                    <?php echo Form::close(); ?>
+
+                <?php else: ?>
+        </div>
+        <?php endif; ?>
+        <?php $__env->stopSection(); ?>
+
+        <?php $__env->startSection('wizardcontent'); ?>
+
+       <!-- JE <?php echo $__env->make('snipplets.steps_header_text', ['step' => 'STEP7'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
+                <!-- errors -->
+        <?php echo $__env->make('errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+        <?php echo $__env->make('steps.partials.office_checkout', ['client' => $client], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+        <input type="hidden" name="merchant[step]" value="3">
+
+        <script>
+            jQuery('#SameAsMailing').on('change', function(){
+                var checked = jQuery(this).is(':checked');
+                if (checked) {
+                    jQuery('.billing_fields').hide();
+                }
+                else jQuery('.billing_fields').show();
+            }).trigger('change');
+
+            jQuery('#Tprice').on('keyup',function(){
+                // jQuery('#checkbox5').prop('checked',true).trigger('change');
+                var tprice = jQuery(this).val();
+                if(isNaN(tprice))
+                {
+                    jQuery('.numerror').show();
+                }
+                else{
+                    jQuery('.numerror').hide();
+                }
+
+
+            });
+
+        </script>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('wizard', array('stepnav' => false, 'class' => 'navbar-info text-info'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

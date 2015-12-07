@@ -1,0 +1,656 @@
+<?php defined('WEBSITE_STYLE_VERSION') or define('WEBSITE_STYLE_VERSION', md5_file('style.css')); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo ( defined("WEBSITE_TITLE") ? WEBSITE_TITLE : "DIY STUDENT LOAN SERVICES" ); ?></title>
+	<link rel="stylesheet" href="<?php echo URL::to('packages/wizard/css/site.css?v=2'); ?>" />   
+    <link href="<?php echo URL::to('packages/wizard/css/bootstrap.min-flat.css'); ?>" rel="stylesheet">
+	<link href="<?php echo URL::to('packages/wizard/css/pace.css?v=4'); ?>" rel="stylesheet" />	
+	<link href="<?php echo URL::to('packages/fa/css/font-awesome.min.css?v=4'); ?>" rel="stylesheet" />
+	<link href="<?php echo URL::to('packages/datepicker/css/bootstrap-datepicker3.min.css?v=1'); ?>" rel="stylesheet" />	
+	
+    <script src="<?php echo URL::to('packages/jslibs/pace.js'); ?>"></script>   
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo URL::to('packages/bootstrap/js/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo URL::to('packages/jslibs/jquery-scrollto.js'); ?>"></script>
+    <script src="<?php echo URL::to('packages/jslibs/loader.js'); ?>"></script>
+	<link href="<?php echo URL::to('style.css?v='.WEBSITE_STYLE_VERSION); ?>" rel="stylesheet" />  
+	
+<!--	Date Picker Stylesheets-->
+    <script src="<?php echo URL::to('packages/datepicker/js/bootstrap-datepicker.min.js?v=1'); ?>"></script>
+    <script src="<?php echo URL::to('packages/jslibs/jquery.number.js?v=1'); ?>"></script>
+   
+    
+<script src="<?php echo URL::to('packages/jslibs/jquery.maskedinput.js'); ?>" type="text/javascript"></script>	 
+   <script src="<?php echo URL::to('packages/jslibs/phonenumbers.js?v=11'); ?>"></script>   
+<script type="text/javascript" src="//www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+	<script>
+
+		var CurrentStepsLoaded = step1;
+
+		var step1 = 1;
+		var step2 = 2;
+		var step3 = 4;
+		var step4 = 8;
+		var step5 = 16;
+		var step6 = 32;
+		var step7 = 64;
+		var step8 = 128;
+		var step9 = 256;
+		var step10 = 512;
+
+		var page_crm=step8;
+		var page_privacypolicy = step9;
+		var page_loans=step10;
+
+	</script>
+	<style>
+
+		h3, h4{
+			font-size: 18px;
+		}
+		.page-title {
+			font-size: 28px !important;
+		}
+
+		.btn-file {
+			position: relative;
+			overflow: hidden;
+		}
+		.btn-file input[type=file] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+			font-size: 100px;
+			text-align: right;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			outline: none;
+			background: white;
+			cursor: inherit;
+			display: block;
+		}
+		.fa-spin-custom, .glyphicon-spin {
+			-webkit-animation: spin 1000ms infinite linear;
+			animation: spin 1000ms infinite linear;
+		}
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(359deg);
+				transform: rotate(359deg);
+			}
+		}
+		@keyframes  spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(359deg);
+				transform: rotate(359deg);
+			}
+		}
+	</style>
+  </head>
+  <body>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58838977-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  
+  <!-- navigation -->
+
+    <div style="padding:8px 0px 12px 0px;" id="logo_container">
+	<div  class="container-fluid">
+	<div class="row">
+			<div class="col-sm-3 col-md-3 col-md-offset-2 col-xs-4">
+				<?php if(defined('WEBSITE_LOGO')): ?>
+	  			 <img align="right" src="<?php echo URL::to(WEBSITE_LOGO); ?>" class="img-responsive">
+	  			 <?php endif; ?>
+	        </div>
+
+			<div class="col-sm-7 col-md-7 col-xs-11">
+			<?php if(defined('MAIN_TEXT_TOP')): ?>
+					<h2 class="page-title" style="margin-top:14px;"><?php echo MAIN_TEXT_TOP; ?></h2>
+			<?php endif; ?>
+    		</div>
+    	</div>
+
+
+    </div></div>
+
+    
+
+    <!-- Container -->
+    <div class="container"> 
+
+		<?php if(defined('MAINTENANCE_ENABLED') && MAINTENANCE_ENABLED == 'yes'): ?>
+    	<div class="row-fluid" style="padding-bottom:0px;">
+    		<div class="col-sm-10 col-sm-offset-1" style="padding-bottom:0px;">
+				<hr>
+					
+		    	<div class="alert btn-block alert-default" style="opacity:0.4;padding-bottom:0px;padding-top:0px;" onmouseover="jQuery(this).css('opacity',1)" onmouseout="jQuery(this).css('opacity',0.4);">
+			    	<div class="row " style="padding-top:8px;padding-bottom:0px;">
+			    	
+				    	<div class="col-sm-1 text-muted" style="font-size:40px;">!</div>
+				    	<div class="col-sm-11">
+					    	<p class="well well-sm text-muted" style="margin-bottom:0;">
+						    	<b>Maintenance</b> will start at <?php echo MAINTENANCE_START; ?> and will end at <?php echo MAINTENANCE_END; ?>
+
+					    	</p><br>
+						</div>
+					</div>
+    			</div>
+	    	</div>
+    	</div>
+    	
+       	 <?php endif; ?>
+
+
+			<?php if(!Session::get('accepted_disclosure')): ?>
+
+                <?php echo $__env->make('layouts.disclosure', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+			<?php else: ?>
+
+
+
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+                    <?php if(!isset($hide_returning_customer) || !$hide_returning_customer ): ?>
+					<?php if (!$_GET['notice']): ?>
+				<!-- JE	<table width="100%">
+					<tr>
+						<td height="55px" width="170" bgcolor="#FFFF80">
+							&nbsp; &nbsp; <strong style="color:red; font-size:22px;">IMPORTANT:</strong>
+						</td>
+						<td height="55px" bgcolor="#FFFF80">
+							<strong style="color:black;">If you have already started or completed the process then you <em><b>MUST</b></em> check the returning client checkbox before starting Step 1.</strong>
+						</td>
+						<td height="55px" width="200" align="right" bgcolor="#FFFF80">
+							<input type="checkbox" id="returning_check_box" name="returning_check_box" <?php echo Session::get('ShowReturnPanel') ? 'checked="checked"' : ''; ?>>
+							<label for="returning_check_box" style=""><u><strong style="color:black;">RETURNING CLIENT?</strong></u> &nbsp; &nbsp; </label>
+						</td>
+					</tr>
+					</table> -->
+					<?php else: ?>
+					<table width="100%">
+					<tr>
+						<td height="55px" width="170" bgcolor="#FF5050">
+							&nbsp; &nbsp; <strong style="color:black; font-size:22px;">IMPORTANT:</strong>
+						</td>
+						<td height="55px" bgcolor="#FF5050">
+							<strong style="color:white;">You are attempting to make a change to a previously completed step. Please start again from Step 1 and make sure all your information is correct and recheck the box at the bottom of each step to continue.</strong>
+						</td>
+					</tr>
+					</table>
+					<?php endif; ?>
+					<br />
+					<!-- PRZ
+					<div style="text-align:left;" bgcolor="#0076E8">If you have already <em>started OR completed</em> the process then you <em><b>must</b></em> check the Returning Client box to the right.
+						<input type="checkbox" id="returning_check_box" name="returning_check_box" <?php echo Session::get('ShowReturnPanel') ? 'checked="checked"' : ''; ?>> 
+						<label for="returning_check_box" style=""><u><b>RETURNING CLIENT?</b></u></label>
+					</div>
+					-->
+                    <?php endif; ?>
+				</div>
+			</div>
+
+			<div class="returning_client_container">
+                <div id="returning_client" class="<?php echo Session::get('ShowReturnPanel') ? '' : 'shown'; ?>">
+
+                <?php if(!Request::Ajax()): ?>
+                        <?php echo $__env->make('returningclient', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                 <?php endif; ?>
+
+                </div>
+			</div>
+
+           <div class="form-content">
+                <?=$content?>
+           </div>
+           <div class="mask hidden"><div id="intro-loader"></div></div>
+         
+         <center><img class=" wp-image-1370 alignright" src="http://www.diy-sls.com/wp-content/uploads/2015/02/ssl-300x134.png" alt="ssl" width="150" height="67" /></center>
+    </div>
+
+      <div class="hide">
+          <?php echo $__env->make('browsermismatch', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+      </div>
+
+
+  		<?php endif; ?>
+
+
+  <script>
+    function HidePreviousStep(element)
+    {
+    	var beforeelemet= jQuery('.stepdef', jQuery(element).parent().prev(':first'));
+
+    	if (typeof beforeelemet !== 'undefined')
+    	{
+    		if (beforeelemet.length >= 1)
+    		{
+    			if (beforeelemet.data('step-number'))
+    			{
+    				var stepnumber = beforeelemet.data('step-number');
+
+    				//jQuery('*[data-step-number="step3"]').ScrollTo();
+    				jQuery('.wizard-content',beforeelemet).slideUp(function(){ jQuery(element).ScrollTo(); });
+
+    			}
+    			// jQuery(beforeelemet).scrollUp();
+    		}
+    	}
+
+    }
+    <?php if(!Request::Ajax()): ?>
+//    	var CheckBrowserIdInterval = setInterval(function(){ jQuery(document).trigger('CheckIsDocumentOwner'); }, 25000);
+
+   		function DisplayWrongBrowserDialog()
+		{
+			jQuery('#browsermismatchconfirm').modal('show');
+		}
+
+		jQuery('#browsermismatchconfirm').on('show.bs.modal', function(){
+			clearInterval(CheckBrowserIdInterval);
+		});
+
+//	jQuery('#browsermismatchconfirm').on('hidden.bs.modal', function(){
+//		clearInterval(CheckBrowserIdInterval);
+//		CheckBrowserIdInterval = setInterval(function(){ jQuery(document).trigger('CheckIsDocumentOwner'); }, 5500);
+//	});
+
+
+		function RegisterThisBrowserSession() {
+			var postargs = {'_token': '<?php echo Session::token(); ?>', 'browser': 'register!'};
+
+			jQuery.post('<?php echo Url::to('/RegisterBrowserSession'); ?>',postargs, function(data){
+
+				// tell our browser which steps to reload
+				loadstepsplz = [CurrentStepsLoaded];
+				loadstepz = true;
+
+				// trigger the step reload functionality
+				jQuery(document).trigger('LoadStepCompleted');
+			});
+		}
+
+
+    	jQuery(document).bind('CheckIsDocumentOwner', function(){
+			if (jQuery('#dontcheckagain').is(':checked')) return false;
+
+				jQuery.get('<?php echo Url::to('/IsDocumentOwner/'); ?>', {'csl': CurrentStepsLoaded}, function(result){
+					if (result.compare_result == false)
+					{
+						DisplayWrongBrowserDialog();
+					}
+				}, 'json');
+			});
+
+		jQuery('#register_this_browser').on('click', function(e){
+
+			RegisterThisBrowserSession();
+			jQuery('#browsermismatchconfirm').modal('hide');
+			return false;
+		});
+
+    	jQuery('#returning_check_box').on('change',function(){
+    		var checked = jQuery(this).is(':checked');
+
+    		if (checked)
+    		{
+    			jQuery('#returning_client').removeClass('hidden');
+    		}
+    		else
+    		jQuery('#returning_client').addClass('hidden');
+
+    	});
+
+		$(document).on('change', '.btn-file :file', function() {
+			var input = $(this),
+					numFiles = input.get(0).files ? input.get(0).files.length : 1,
+					label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+			input.trigger('fileselect', [numFiles, label]);
+		});
+
+    	jQuery('.form-content').on('submit', 'form.ajaxcheck', function(e){
+    		e.preventDefault();
+    		form = this;
+    		// submit the form, we've checked the box, so !
+    		// we need to post the form:
+
+    		if(jQuery("#fafsapin").val())
+    		{
+    			var formfields = new FormData(jQuery(form)[0]);
+    			var pd = false;
+    			var ct = false;
+    		}else{
+    			var formfields = jQuery(form).serialize();
+    			var pd = true;
+    			var ct = 'application/x-www-form-urlencoded; charset=UTF-8';
+    		}
+
+
+    		// debugger;
+    		// jQuery.each(jQuery('#inputFile')[0].files, function(i, file) {
+    		// data.append('file, file);
+    		// });
+
+
+    		var data = '';
+
+    		//get the container.
+    		var parentNode = jQuery(form).parents('.wizard-container2');
+
+    		// Find if they have any alerts and remove them.
+    		jQuery('.alert', parentNode).remove();
+
+
+    		// Show a Loader.
+    		var ajaxLoading = new ajaxLoader(parentNode, {classOveride: 'blue-loader', bgColor: '#000', opacity: '0.6'});
+
+    		Pace.track(function(){
+
+    			jQuery.ajax({
+    				url: jQuery(form).attr('action'),
+    				method: "POST",
+    				data: formfields,
+    				processData: pd,
+    				contentType: ct,
+    				success: function(data){
+    					var html = jQuery(data);
+    					var content = jQuery('.form-content .step-wrapper', html);
+    					var step_number = jQuery('.stepdef',html).data('step-number');
+
+    					if (typeof step_number == "undefined")
+    					{
+    						console.log("Error: Step number is undefined.");
+    						console.log(data);
+    					}
+    					// alert('Step Number: '+step_number);
+    					console.log('Step Number: '+step_number+' loaded.');
+    					// if the container exists already we need to append our content before it, then remove the old one.
+    					if (jQuery('.stepdef[data-step-number="'+step_number+'"]').length)
+    					{
+    						var stepfound = jQuery('*[data-step-number="'+step_number+'"]').prev(':first');
+    						stepfound.addClass('hidden');
+    						stepfound.before(content);
+    						stepfound.remove();
+    						HidePreviousStep('*[data-step-number="'+step_number+'"]');
+    						jQuery('*[data-step-number="'+step_number+'"]').ScrollTo();
+    					} else {
+    						console.log('*[data-step-number="'+step_number+'"] not found');
+    						jQuery('.form-content:first').append(content);
+    						HidePreviousStep('*[data-step-number="'+step_number+'"]');
+    						jQuery('*[data-step-number="'+step_number+'"]').ScrollTo();
+    					}
+    				}
+    			}).fail(function(){
+    				alert('Please try again later.'); // PRZ
+    			}).always( function(){
+    				ajaxLoading.remove();
+    			});
+
+
+    			jQuery('.form-control', form).each(function(){ jQuery(this).addClass('disabled',true); });
+    		});
+
+    		return false;
+
+    	});
+    	jQuery('.form-content').on('click', '.disabled', function(){
+			// PRZ When going back a step and selecting a field (auto uncheck submit box)
+    		var form = jQuery(this).parents('.form-content');
+    		// try to find the form submitter
+    		var formsubmitter = jQuery('.formsubmitter', form);
+
+    		if (formsubmitter.length)
+    		{
+    			// see if it is checked
+    			if (jQuery(formsubmitter).is(':checked'))
+    			{
+    				// uncheck it
+    				jQuery(formsubmitter).removeProp('checked').trigger('change');
+    			}
+    		}
+    	});
+
+    	jQuery('.form-content').on('change','.formsubmitter', function(){
+			// PRZ Whenever checkbox is checked OR unchecked!
+    		var checked = jQuery(this).is(':checked');
+    		var form = jQuery(this).parents('form');
+
+    		// disable the fields if they have checked the box (meaning this is the data we've submitted to the server.)
+    		// default: steps will be disabled unless they uncheck this box.
+    		if (checked)
+    		{
+    			form.submit();
+    		}
+    		else
+    		{
+    			jQuery('.form-control', form).each(function(){ jQuery(this).removeClass('disabled'); });
+    		}
+    		//lets get a serialized list of form fields.
+    	});
+
+
+    	function LoadStep(stepurl, container)
+    	{
+			if (typeof container != "undefined")
+			var parentNode = jQuery(this)
+    		// start the loading signal from the active window.
+    		//get the container.
+    		var parentNode = jQuery('.wizard-content').not(':hidden');
+    		// Find if they have any alerts and remove them.
+
+    		if (parentNode.length < 1) var parentNode = jQuery('.wizard-content:last');
+
+    		if (parentNode.length < 1) {
+				jQuery('.container:first').append('<div class="wizard-content"><div class="form-content"></div></div>');
+				var parentNode = jQuery('.wizard-content').not(':hidden');
+			}
+
+			console.log('Load Page Activated. Page Loading: '+stepurl);
+			console.log('Parent Node Length: '+parentNode.length);
+
+
+    		// Show a Loader.
+    		var ajaxLoading = new ajaxLoader(parentNode, {classOveride: 'blue-loader', bgColor: '#000', opacity: '0.6'});
+
+
+    		Pace.track(function(){
+
+
+
+    			jQuery.get(stepurl, function(data){
+    				var html = jQuery(data);
+    				var content = jQuery('.form-content .stepdef', html);
+    				var step_number = jQuery('.stepdef',html).data('step-number');
+    				//    				alert('Step Number: '+step_number);
+    				// if the container exists already we need to append our content before it, then remove the old one.
+    				if (jQuery('.stepdef[data-step-number="'+step_number+'"]').length)
+    				{
+    					var stepfound = jQuery('.stepdef[data-step-number="'+step_number+'"]');
+    					stepfound.addClass('hidden');
+    					stepfound.before(content);
+    					stepfound.remove();
+
+    					HidePreviousStep('.stepdef[data-step-number="'+step_number+'"]');
+    					jQuery('*[data-step-number="'+step_number+'"]').ScrollTo();
+
+    				}
+    				else
+    				{
+    					jQuery('.form-content:first').append(content);
+
+    					HidePreviousStep('.stepdef[data-step-number="'+step_number+'"]');
+    					jQuery('*[data-step-number="'+step_number+'"]').ScrollTo();
+    				}
+    			})
+    			.fail(function(){
+    				alert('An error occured. Please try again later.');
+    			})
+    			.always(function(){
+    				ajaxLoading.remove();
+							jQuery(document).trigger('LoadStepCompleted');
+
+						});
+    		});
+    	}
+
+    	
+    	<?php endif; ?>
+
+
+    	jQuery('.form-content').on('click','.mywizardsteptext', function(){
+			window.location = '/step1?notice=1';
+			return; // PRZ Force user back to /step1
+
+			// PRZ Whenever a tab title is clicked when going back to another step!
+    		var parentNode = jQuery(this).parents('.stepdef');
+
+			jQuery('.formsubmitter').each(function() { this.checked = false; }); // PRZ Added to uncheck all checkboxes
+			jQuery('.wizard-content').show(); // PRZ Added to open all steps so the user has to repeat the process
+    		// jQuery('.wizard-content',parentNode).toggle(); // PRZ Disabled because of the above line!
+			// alert('You are attempting to make a change to a previously completed step. All steps are now open, please start from Step 1 and make sure all your information is correct and recheck the box at the bottom of each step.');
+    	});
+    	
+
+	  var loadstepsplz = <?php echo json_encode(explode('|',Input::get('wl'))); ?>;
+	  var loadstepz = true;
+
+
+	  jQuery(document).bind('LoadStepCompleted', function(){
+		  if (loadstepz == true)
+		  {
+			  console.log('Load Steps is: '+typeof loadstepsplz+'');
+
+			  if (loadstepsplz.length)
+			  {
+				  var step_to_load = parseFloat(loadstepsplz.shift());
+				  console.log('Loading BITWISE: '+step_to_load);
+
+			  }
+			  if (step_to_load >0)
+			  {
+				  if (step_to_load & step1)
+				  {
+					  step_to_load = step_to_load  ^ step1;
+					  LoadStep('/step1');
+				  }
+
+				  else if (step_to_load & step2)
+				  {
+					  step_to_load = step_to_load  ^ step2;
+					  LoadStep('/step2');
+				  }
+				  else if (step_to_load & step3)
+				  {
+					  step_to_load = step_to_load  ^ step3;
+					  LoadStep('/step3');
+				  }
+				  else if (step_to_load & step4)
+				  {
+					  step_to_load = step_to_load  ^ step4;
+					  LoadStep('/step4');
+				  }
+
+				  else if (step_to_load & step5)
+				  {
+					  step_to_load = step_to_load  ^ step5;
+					  LoadStep('/step5');
+				  }
+				  else if (step_to_load & step6)
+				  {
+					  step_to_load = step_to_load  ^ step6;
+					  LoadStep('/step6');
+				  }
+				  else if (step_to_load & step10)
+				  {
+					  step_to_load = step_to_load  ^ step10;
+					  LoadStep('/stepshowloans');
+				  }
+				  else if (step_to_load & step7)
+				  {
+					  step_to_load = step_to_load  ^ step7;
+					  LoadStep('/step7');
+				  }
+				  else if (step_to_load & step8)
+				  {
+					  step_to_load = step_to_load  ^ step8;
+					  LoadStep('/crm');
+				  }
+				  else if (step_to_load & step9)
+				  {
+					  step_to_load = step_to_load  ^ step9;
+					  LoadStep('/privacypolicy');
+				  }
+				  else
+				  {
+					  loadstepz = false;
+					  console.log("Unable to load the the following bits: "+ loadstepsplz);
+				  }
+
+				  if (step_to_load > 0)
+				  {
+					  console.log('This instruction has more bits remaining, placing back at the top of our load array');
+					  console.log("LoadSteps Bits Unshifted: "+step_to_load);
+					  loadstepsplz.unshift(step_to_load);
+				  }
+			  }
+
+		  }
+	  });
+
+	<?php if(Session::get('accepted_disclosure') && Input::get('wl')): ?>
+		 jQuery(document).trigger('LoadStepCompleted');
+		<?php endif; ?>
+
+
+
+
+
+    </script>
+	
+	
+	<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName("script")[0];
+	a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0030/4817.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+    
+    
+    </body>
+</html>

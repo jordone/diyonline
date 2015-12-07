@@ -1,0 +1,200 @@
+
+<!-- JE <center><font color="#125280" style="font-size:24px;">A process that can normally take hours to complete has just been completed</font> 
+    <br/></center>-->
+
+<div class="panel panel-default paypanel">
+    <div class="panel-heading"><b>Pay with credit card</b> <span class="pull-right"><img src="/packages/wizard/images/lock.png" align="absmiddle"> This page is secured with SSL Encryption</span></div>
+    <div class="panel-body">
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">Total Amount Due:</label>
+            <div class="col-sm-3">
+                <input type="text"  class="form-control"  name="tprice" id='Tprice' style="float:left" value="<?php echo $client->TProperties->TotalPayments; ?>">
+
+                <span class="numerror" style="display:none;color:red;margin-top:5px;">Please enter a valid number!</span>
+            </div>
+            <div class="col-sm-1"><small>USD</small></div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3"> Number of Payments</label>
+            <div class="col-sm-9"><select class="form-control" id="set_nopayments" name="ltf[NoPayments]">
+                    <?php for($NoPayments=1;$NoPayments<=3;$NoPayments++): ?>
+                    <option value="<?php echo $NoPayments; ?>" <?php echo (intval($client->TProperties->NoPayments) == $NoPayments ? "selected='selected'" : ''); ?>><?php echo $NoPayments; ?> Payment(s)</option>
+                    <?php endfor; ?>
+                </select></div>
+        </div>
+
+        <div id="split_payment" class="hide">
+            <?php echo $__env->make('steps.partials.office_splitpayments', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+
+        <script>
+            jQuery('#set_nopayments').on('change', function(){
+                var nopayments = jQuery(this).val();
+                var nofixpayments = jQuery('.fixed_payments .splitpaymentx');
+                var totalfixedpayments = nofixpayments.length;
+
+                var first_payment_amount = parseFloat( jQuery('#Tprice').val() / nopayments ).toFixed(2);
+
+
+                jQuery('#NoPaymentsValue').text(nopayments);
+                jQuery('#split_payment').removeClass('hide');
+
+                if (nopayments > 1)
+                    jQuery('#split_payment .panel:first').removeClass('hide panel-default panel-success').addClass('panel-info');
+                else
+                    jQuery('#split_payment .panel:first').addClass('panel-default').removeClass('hide panel-info panel-success panel-danger');
+
+                nofixpayments.slice(0, nopayments).removeClass('hide disabled');
+
+                if (nopayments < totalfixedpayments)
+                nofixpayments.slice( ( (totalfixedpayments-nopayments) * -1) ).addClass('hide disabled');
+
+                jQuery('.splitpaymentx.disabled .payment_amount').val(0);
+                jQuery('.splitpaymentx:eq(0) .payment_amount').val(first_payment_amount).trigger('keyup');
+
+
+            });
+            setTimeout(function(){ jQuery('#set_nopayments').trigger('change') }, 200);
+        </script>
+
+        <hr>
+
+        <h3 class="page-title">Billing Information </h3>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">First Name</label>
+            <div class="col-sm-9"><input class="form-control" name="Billing_first_name" value="<?php echo $client->TProperties->FirstName; ?>" placeholder="First Name" required></div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">Last Name</label>
+            <div class="col-sm-9"><input type="text" class="form-control" name="Billing_last_name" value="<?php echo $client->TProperties->LastName; ?>"  placeholder="Last Name" required></div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">Address</label>
+            <div class="col-sm-9"><input type="text" class="form-control" name="Billing_address" placeholder="Address" value="<?php echo $client->TProperties->AddressLine1; ?>" required></div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">City</label>
+            <div class="col-sm-9"><input type="text" class="form-control" name="Billing_city" placeholder="City" value="<?php echo $client->TProperties->City; ?>" required></div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">Country</label>
+            <div class="col-sm-9"><select name="Billing_country" class="form-control">
+                    <option value="US">United States</option>
+                </select></div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">State/Province</label>
+            <div class="col-sm-9">
+                <?php echo Form::stateSelect('Billing_state', $client->TProperties->State, ["class" => "form-control required"]); ?>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">Zip/Postal Code</label>
+            <div class="col-sm-9"><input type="text" class="form-control" name="Billing_zipcode" placeholder="Zip Code" value="<?php echo $client->TProperties->ZipCode; ?>" required ></div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">Email</label>
+            <div class="col-sm-9"><input type="email" class="form-control" name="Billing_email" placeholder="Email Address" value="<?php echo $client->TProperties->EmailAddress; ?>" required></div>
+        </div>
+        <h3 class="page-title">Mailing Address <div class="pull-right"><input type="checkbox" value="1" name="sameasmailing" id="SameAsMailing" checked> <label for="SameAsMailing" class="label-checkbox" style="line-height:40px;font-size:16px;">Same as Billing Address</label>&nbsp;&nbsp;</div></h3>
+        <div class="billing_fields">
+            <div class="form-group">
+                <label class="control-label col-sm-3">First Name</label>
+                <div class="col-sm-9"><input class="form-control" name="Mailing_Address_first_name" placeholder="First Name"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Last Name</label>
+                <div class="col-sm-9"><input type="text" class="form-control" name="Mailing_Address_last_name" placeholder="Last Name"></div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Address</label>
+                <div class="col-sm-9"><input type="text" class="form-control" name="Mailing_Address" placeholder="Address"></div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">City</label>
+                <div class="col-sm-9"><input type="text" class="form-control" name="Mailing_Address_city" placeholder="City"></div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Country</label>
+                <div class="col-sm-9"><select name="Mailing_Address_country" class="form-control">
+                        <option value="US">United States</option>
+                    </select></div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">State/Province</label>
+                <div class="col-sm-9"><input type="text" class="form-control" name="Mailing_Address_state" placeholder="State"></div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3">Zip/Postal Code</label>
+                <div class="col-sm-9"><input type="text" class="form-control" name="Mailing_Address_zipcode" placeholder="Zip Code"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Email</label>
+                <div class="col-sm-9"><input type="email" class="form-control" name="Mailing_Address_email" placeholder="Email Address"></div>
+            </div>
+        </div>
+
+        <h3 class="page-title">Credit Card Information</h3>
+        <br/>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">Card Number</label>
+            <div class="col-sm-9"><input type="text" name="card_number" class="form-control" placeholder="Card Number (no spaces or dashes)" value="" required></div>
+        </div>
+
+        <div class="form-group">
+            <label for="billing_name" class="control-label col-sm-3">Name on Card</label>
+            <div class="col-sm-9"><input type="text" id="billing_name" name="billing_name" class="form-control" placeholder="Name as it appears on your credit card." required></div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">Expiration</label>
+            <div class="col-sm-6">
+                <select name="expiration_month" class="form-control">
+                    <option value="1">1 - January</option>
+                    <option value="2">2 - February</option>
+                    <option value="3">3 - March</option>
+                    <option value="4">4 - April</option>
+                    <option value="5">5 - May</option>
+                    <option value="6">6 - June</option>
+                    <option value="7">7 - July</option>
+                    <option value="8">8 - August</option>
+                    <option value="9">9 - September</option>
+                    <option value="10">10 - August</option>
+                    <option value="11">11 - November</option>
+                    <option value="12">12 - December</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <select name="expiration_year" class="form-control">
+                    <?php foreach($exp_years as $exp_year): ?>
+                        <option value="<?php echo e($exp_year); ?>"><?php echo e($exp_year); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-3">CVV</label>
+            <div class="col-sm-2"><input type="text" name="cvv" class="form-control" placeholder="CVV" required></div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="form-group">
+    <center><input type="submit" name="action_checkout" value="SUBMIT" class="btn btn-success"></center> <br/>
+    <center>* Please click submit once, the following page will load confirming the customers payment. After, you'll be notified on that page once thier payment has been completed.</center>
+</div>
